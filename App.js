@@ -9,8 +9,10 @@ import { format } from 'date-fns';
 import esLocale from 'date-fns/locale/es';
 import DetallesViajeScreen from './DetallesViajeScreen';
 
+// Ordenar los viajes por fecha
 const formatFecha = (fecha) => format(new Date(fecha), "dd 'de' MMMM 'de' yyyy", { locale: esLocale });
 
+// Inicializar Firebase
 const app = initializeApp(environment.firebase);
 const firestore = getFirestore(app);
 const Stack = createStackNavigator();

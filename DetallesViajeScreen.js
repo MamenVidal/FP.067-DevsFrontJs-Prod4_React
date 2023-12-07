@@ -1,11 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { format } from 'date-fns';
-const formatFecha = (fecha) => format(new Date(fecha), "dd'/'MM'/'yyyy");
 
-const DetallesViajeScreen = ({ route }) => {
+
+  // Ordenar los viajes por fecha
+  const formatFecha = (fecha) => format(new Date(fecha), "dd'/'MM'/'yyyy");
+
+// Componente de la pantalla de detalles de viaje
+  const DetallesViajeScreen = ({ route }) => {
   const { item } = route.params;
   const fechaFormateada = formatFecha(item.fecha);
+
+  // Define la función para manejar la navegación
+  const irAMultimedia = () => {
+    navigation.navigate('MultimediaScreen', { item }); 
+  };
 
   return (
     <View style={styles.detallesViajePantalla}>
@@ -14,8 +23,11 @@ const DetallesViajeScreen = ({ route }) => {
           style={styles.imagen}
           source={{ uri: item.imagen }}
           resizeMode="cover"
-        />
+        />    
+  
       ) : null}
+
+
       <Text style={styles.tituloTarjeta}>{item.nombre}</Text>
       <Text style={styles.lineaDetalle}>
         <Text style={styles.bold}>Fecha: </Text>
@@ -43,10 +55,16 @@ const DetallesViajeScreen = ({ route }) => {
           ))}
         </View>
       )}
+
+      {/* Botón para navegar a MultimediaScreen */}
+        <TouchableOpacity style={styles.botonPersonalizado} onPress={irAMultimedia}>
+        <Text style={styles.textoBoton}>Ver Video del Viaje</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
+// Estilos
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -85,6 +103,18 @@ const styles = StyleSheet.create({
       width: '100%',
       height: 200,
       marginBottom: 10,
+    },
+    botonPersonalizado: {
+      backgroundColor: '#007bff', // color de fondo
+      padding: 10,
+      borderRadius: 5,
+      width: 200, // Ancho 
+      alignSelf: 'center', // Centra el botón en su contenedor
+      alignItems: 'center', // Centra el texto en el botón
+    },
+    textoBoton: {
+      color: 'white', // color del texto
+      fontWeight: 'bold',
     },
   });
 
