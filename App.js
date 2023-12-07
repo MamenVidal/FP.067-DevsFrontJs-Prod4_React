@@ -8,6 +8,7 @@ import { environment } from './environments/environment';
 import { format } from 'date-fns';
 import esLocale from 'date-fns/locale/es';
 import DetallesViajeScreen from './DetallesViajeScreen';
+import MultimediaScreenComponent from './MultimediaScreen';
 
 // Ordenar los viajes por fecha
 const formatFecha = (fecha) => format(new Date(fecha), "dd 'de' MMMM 'de' yyyy", { locale: esLocale });
@@ -98,6 +99,10 @@ export default function App() {
         options={{
           title: 'Detalle del día',
         }}
+      />
+      <Stack.Screen 
+        name="MultimediaScreen" 
+        component={MultimediaScreenComponent}  
       />
     </Stack.Navigator>
   </NavigationContainer>

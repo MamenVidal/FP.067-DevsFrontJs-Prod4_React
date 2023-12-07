@@ -2,18 +2,17 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { format } from 'date-fns';
 
-
-  // Ordenar los viajes por fecha
-  const formatFecha = (fecha) => format(new Date(fecha), "dd'/'MM'/'yyyy");
+// Ordenar los viajes por fecha
+const formatFecha = (fecha) => format(new Date(fecha), "dd'/'MM'/'yyyy");
 
 // Componente de la pantalla de detalles de viaje
-  const DetallesViajeScreen = ({ route }) => {
+const DetallesViajeScreen = ({ route, navigation }) => { // Asegúrate de incluir 'navigation' aquí
   const { item } = route.params;
   const fechaFormateada = formatFecha(item.fecha);
 
   // Define la función para manejar la navegación
   const irAMultimedia = () => {
-    navigation.navigate('MultimediaScreen', { item }); 
+    navigation.navigate('MultimediaScreen', { item }); // Usa 'navigation.navigate' en lugar de 'navigator.navigate'
   };
 
   return (

@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, Text } from 'react-native';
-import Video from 'react-native-video';
+import { Video } from 'expo-av';
 
 
 const MultimediaScreen = ({ route }) => {
