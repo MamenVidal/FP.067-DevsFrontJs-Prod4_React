@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { formatFecha } from './utils'; // Asegúrate de que esta función esté definida y exportada adecuadamente
+import { formatFecha } from './utils'; 
 
 class TarjetaViaje extends Component {
   render() {

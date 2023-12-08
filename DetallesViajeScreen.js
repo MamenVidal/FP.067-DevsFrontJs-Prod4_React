@@ -1,6 +1,7 @@
-import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity, Modal } from 'react-native';
 import { format } from 'date-fns';
+import { PinchGestureHandler, State } from 'react-native-gesture-handler';
 
 // Ordenar los viajes por fecha
 const formatFecha = (fecha) => format(new Date(fecha), "dd'/'MM'/'yyyy");
@@ -9,6 +10,20 @@ const formatFecha = (fecha) => format(new Date(fecha), "dd'/'MM'/'yyyy");
 const DetallesViajeScreen = ({ route, navigation }) => { 
   const { item } = route.params;
   const fechaFormateada = formatFecha(item.fecha);
+  const [modalVisible, setModalVisible] = useState(false);
+  const [scale, setScale] = useState(1);
+
+ // 
+  const onPinchEvent = (event) => {
+    if (event.nativeEvent.scale > 1) {
+      setScale(event.nativeEvent.scale);
+    }
+  };
+  const onPinchStateChange = (event) => {
+    if (event.nativeEvent.oldState === State.ACTIVE) {
+      setScale(1);
+    }
+  };
 
   // Define la función para manejar la navegación
   const irAMultimedia = () => {
@@ -17,13 +32,14 @@ const DetallesViajeScreen = ({ route, navigation }) => {
 
   return (
     <View style={styles.detallesViajePantalla}>
-      {item.imagen ? (
-        <Image
-          style={styles.imagen}
-          source={{ uri: item.imagen }}
-          resizeMode="cover"
-        />    
-  
+        {item.imagen ? (
+        <TouchableOpacity onPress={() => setModalVisible(true)}>
+          <Image
+            style={styles.imagen}
+            source={{ uri: item.imagen }}
+            resizeMode="cover"
+          />
+        </TouchableOpacity>
       ) : null}
 
 
@@ -59,7 +75,35 @@ const DetallesViajeScreen = ({ route, navigation }) => {
         <TouchableOpacity style={styles.botonPersonalizado} onPress={irAMultimedia}>
         <Text style={styles.textoBoton}>Ver Video del Viaje</Text>
       </TouchableOpacity>
-    </View>
+    
+
+      {/* Modal para el zoom de la imagen */}
+          <Modal
+          animationType="slide"
+          transparent={true}
+          visible={modalVisible}
+          onRequestClose={() => setModalVisible(false)}
+        >
+          <View style={styles.centeredView}>
+            <PinchGestureHandler
+              onGestureEvent={onPinchEvent}
+              onHandlerStateChange={onPinchStateChange}
+            >
+              <Image
+                style={[styles.zoomedImage, { transform: [{ scale }] }]}
+                source={{ uri: item.imagen }}
+                resizeMode="contain"
+              />
+            </PinchGestureHandler>
+            <TouchableOpacity
+              style={styles.closeButton}
+              onPress={() => setModalVisible(false)}
+            >
+              <Text>Cerrar</Text>
+            </TouchableOpacity>
+          </View>
+        </Modal>
+      </View>
   );
 };
 
@@ -114,6 +158,24 @@ const styles = StyleSheet.create({
     textoBoton: {
       color: 'white', // color del texto
       fontWeight: 'bold',
+    },
+    centeredView: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgba(0,0,0,0.5)',
+    },
+    zoomedImage: {
+      width: '100%',
+      height: '80%',
+    },
+    closeButton: {
+      position: 'absolute',
+      top: 50,
+      right: 20,
+      backgroundColor: 'white',
+      padding: 10,
+      borderRadius: 20,
     },
   });
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import InicioScreen from './InicioScreen'; // Asegúrate de que el camino sea correcto según la estructura de tu proyecto
-import DetallesViajeScreen from './DetallesViajeScreen'; // Asumiendo que esto sigue siendo un componente funcional o de clase
-import MultimediaScreenComponent from './MultimediaScreen'; // Asumiendo que esto sigue siendo un componente funcional o de clase
+import InicioScreen from './InicioScreen'; 
+import DetallesViajeScreen from './DetallesViajeScreen'; 
+import MultimediaScreenComponent from './MultimediaScreen'; 
 
 const Stack = createStackNavigator();
 
