@@ -9,10 +9,12 @@ import { environment } from './environments/environment';
 const app = initializeApp(environment.firebase);
 const storage = getStorage(app);
 
+// Pantalla de reproducción de video
 const MultimediaScreen = ({ route }) => {
   const videoRef = useRef(null);
   const [videoUrl, setVideoUrl] = useState(null);
   const [status, setStatus] = useState({});
+  const [loading, setLoading] = useState(true); 
 
   const { item } = route.params;
 
@@ -22,18 +24,27 @@ const MultimediaScreen = ({ route }) => {
         try {
           const url = await getDownloadURL(storageRef(storage, item.video));
           setVideoUrl(url);
+          setLoading(false); 
         } catch (error) {
           console.error('Error al cargar el video: ', error);
+          setLoading(false);
         }
       };
 
       fetchVideoUrl();
+    } else {
+      setLoading(false); 
     }
   }, [item]);
 
-  if (!videoUrl) {
+  if (loading) {
     return <View style={styles.container}><Text>Cargando video...</Text></View>;
   }
+
+  if (!videoUrl) {
+    return <View style={styles.container}><Text>No hay video disponible para hoy</Text></View>;
+  }
+
 
   return (
     <View style={styles.container}>
@@ -66,8 +77,8 @@ const styles = StyleSheet.create({
   },
   video: {
     alignSelf: 'center',
-    width: 320,
-    height: 200,
+    width: '100%',
+    aspectRatio: 16 / 9,
   },
   buttons: {
     flexDirection: 'row',
