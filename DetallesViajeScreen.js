@@ -72,8 +72,8 @@ const DetallesViajeScreen = ({ route, navigation }) => {
       )}
 
       {/* Botón para navegar a MultimediaScreen */}
-        <TouchableOpacity style={styles.botonPersonalizado} onPress={irAMultimedia}>
-        <Text style={styles.textoBoton}>Ver Video del Viaje</Text>
+      <TouchableOpacity style={styles.botonPersonalizado} onPress={irAMultimedia}>
+        <Text style={styles.textoBoton}>Ver vídeo del día</Text>
       </TouchableOpacity>
     
 
@@ -109,10 +109,6 @@ const DetallesViajeScreen = ({ route, navigation }) => {
 
 // Estilos
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      paddingHorizontal: 10,
-    },
     detallesViajePantalla: {
         backgroundColor: 'white',
         padding: 20,
@@ -151,6 +147,7 @@ const styles = StyleSheet.create({
       backgroundColor: '#007bff', // color de fondo
       padding: 10,
       borderRadius: 5,
+      marginTop: 15,
       width: 200, // Ancho 
       alignSelf: 'center', // Centra el botón en su contenedor
       alignItems: 'center', // Centra el texto en el botón
