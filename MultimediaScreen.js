@@ -1,100 +1,79 @@
-import * as React from 'react';
-import { View, StyleSheet, Button, TouchableOpacity, Text } from 'react-native';
-import { Video, ResizeMode } from 'expo-av';
+import React, { useEffect, useState, useRef } from 'react';
+import { View, StyleSheet, Button, Text } from 'react-native';
+import { Video } from 'expo-av';
+import { initializeApp } from 'firebase/app';
+import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
+import { environment } from './environments/environment';
 
-function MulimediaScreen() {
-  const video = React.useRef(null);
-  const [status, setStatus] = React.useState({});
-  
-  const CustomButton = ({ onPress, title, color, backgroundColor }) => (
-    <TouchableOpacity
-      onPress={onPress}
-      style={styles.button}
-      activeOpacity={0.8}
-    >
-    <Text style={styles.text}>{title}</Text>
-    </TouchableOpacity>
-  );
+// Inicializar Firebase
+const app = initializeApp(environment.firebase);
+const storage = getStorage(app);
+
+const MultimediaScreen = ({ route }) => {
+  const videoRef = useRef(null);
+  const [videoUrl, setVideoUrl] = useState(null);
+  const [status, setStatus] = useState({});
+
+  const { item } = route.params;
+
+  useEffect(() => {
+    if (item && item.video) {
+      const fetchVideoUrl = async () => {
+        try {
+          const url = await getDownloadURL(storageRef(storage, item.video));
+          setVideoUrl(url);
+        } catch (error) {
+          console.error('Error al cargar el video: ', error);
+        }
+      };
+
+      fetchVideoUrl();
+    }
+  }, [item]);
+
+  if (!videoUrl) {
+    return <View style={styles.container}><Text>Cargando video...</Text></View>;
+  }
+
   return (
     <View style={styles.container}>
       <Video
-        ref={video}
+        ref={videoRef}
         style={styles.video}
-        source={{
-          uri: 'https://d23dyxeqlo5psv.cloudfront.net/big_buck_bunny.mp4',
-        }}
+        source={{ uri: videoUrl }}
         useNativeControls
-        resizeMode={ResizeMode.CONTAIN}
+        resizeMode="contain"
         isLooping
-        onPlaybackStatusUpdate={status => setStatus(() => status)}
+        onPlaybackStatusUpdate={(status) => setStatus(() => status)}
       />
       <View style={styles.buttons}>
-        <CustomButton
-          title={status.isPlaying ? 'Pause' : 'Play'}
+        <Button
+          title={status.isPlaying ? 'Pausa' : 'Reproducir'}
           onPress={() =>
-            status.isPlaying ? video.current.pauseAsync() : video.current.playAsync()
+            status.isPlaying ? videoRef.current.pauseAsync() : videoRef.current.playAsync()
           }
-        />
-        {/* Stop Button */}
-        <CustomButton
-            title="Stop"
-            onPress={() => video.current.stopAsync()} 
-            color="#FFF"
-            backgroundColor="#FF0000"
-        />
-        {/* Mute Button */}
-        <CustomButton
-            title={status.isMuted ? 'Unmute' : 'Mute'}
-            onPress={() =>
-            video.current.setIsMutedAsync(!status.isMuted)
-            }
-        />
-        {/* Increase Volume Button */}
-        <CustomButton
-            title="Subir Volumen"
-            onPress={() => {
-            let newVolume = Math.min(status.volume + 0.1, 1); 
-            video.current.setVolumeAsync(newVolume);
-            }}
-        />
-
-         {/* Decrease Volume Button */}
-        <CustomButton
-            title="Bajar Volumen"
-            onPress={() => {
-            let newVolume = Math.max(status.volume - 0.1, 0); 
-            video.current.setVolumeAsync(newVolume);
-            }}
         />
       </View>
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    video: {
-        width: 300,
-        height: 200,
-    },
-    button: {
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        margin: 5,
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center'
-      },
-      text: {
-        fontSize: 16,
-        fontWeight: 'bold'
-      }
-    
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#ecf0f1',
+  },
+  video: {
+    alignSelf: 'center',
+    width: 320,
+    height: 200,
+  },
+  buttons: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 });
 
-export default MulimediaScreen;
-
+export default MultimediaScreen;
