@@ -6,13 +6,13 @@ import { format } from 'date-fns';
 const formatFecha = (fecha) => format(new Date(fecha), "dd'/'MM'/'yyyy");
 
 // Componente de la pantalla de detalles de viaje
-const DetallesViajeScreen = ({ route, navigation }) => { // Asegúrate de incluir 'navigation' aquí
+const DetallesViajeScreen = ({ route, navigation }) => { 
   const { item } = route.params;
   const fechaFormateada = formatFecha(item.fecha);
 
   // Define la función para manejar la navegación
   const irAMultimedia = () => {
-    navigation.navigate('MultimediaScreen', { item }); // Usa 'navigation.navigate' en lugar de 'navigator.navigate'
+    navigation.navigate('MultimediaScreen', { item }); 
   };
 
   return (
