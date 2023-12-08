@@ -52,7 +52,8 @@ class InicioScreen extends Component {
               item={item}
             />
           )}
-          keyExtractor={item => item.id}
+          keyExtractor={item => item.nombre + item.fecha}
+
         />
       </View>
     );
