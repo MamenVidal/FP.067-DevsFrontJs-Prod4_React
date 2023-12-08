@@ -15,7 +15,7 @@ export default function App() {
           name="Home"
           component={InicioScreen}
           options={{
-            title: 'misViajes',
+            title: 'Mi viaje',
             headerStyle: {
               backgroundColor: '#000',
             },
