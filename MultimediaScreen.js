@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, StyleSheet, Button, Text, TouchableOpacity } from 'react-native';
-import { Video } from 'expo-av';
+import { Video, ResizeMode } from 'expo-av';
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { environment } from './environments/environment';
-import { Dimensions } from 'react-native';
+
 
 
 // Inicializar Firebase
@@ -18,9 +18,6 @@ const MultimediaScreen = ({ route }) => {
   const [status, setStatus] = useState({});
   const [loading, setLoading] = useState(true); 
   const [volume, setVolume] = useState(1.0); //Volumen del video
-  const windowWidth = Dimensions.get('window').width;
-  const windowHeight = Dimensions.get('window').height;
-
 
   const { item } = route.params;
 
@@ -66,7 +63,8 @@ const MultimediaScreen = ({ route }) => {
       style={styles.video}
       source={{ uri: videoUrl }}
       useNativeControls
-      resizeMode="contain"
+      //resizeMode="contain"
+      resizeMode={ResizeMode.CONTAIN}
       isLooping
       onPlaybackStatusUpdate={(status) => setStatus(() => status)}
     />
@@ -81,6 +79,7 @@ const MultimediaScreen = ({ route }) => {
           }
         />
       </View> */}
+
       <View style={styles.buttonContainer}></View>
       <TouchableOpacity
         style={styles.botonPersonalizado}
@@ -88,12 +87,12 @@ const MultimediaScreen = ({ route }) => {
         <Text style={styles.textoBoton}>{status.isPlaying ? 'Pausa' : 'Reproducir'}</Text>
       </TouchableOpacity>
       <TouchableOpacity
-          style={styles.botonPersonalizado}
-          onPress={() => handleVolumeChange(volume > 0 ? 0 : 1)}>
-          <Text style={styles.textoBoton}>{volume > 0 ? 'Silenciar' : 'Activar Sonido'}</Text>
+        style={styles.botonPersonalizado}
+        onPress={() => handleVolumeChange(volume > 0 ? 0 : 1)}>
+        <Text style={styles.textoBoton}>{volume > 0 ? 'Silenciar' : 'Activar Sonido'}</Text>
         </TouchableOpacity>
       </View>
-      
+
   );
 };
 
@@ -133,7 +132,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#007bff',
   },
   textoBoton: {
-    color: 'white', // color del texto
+    color: 'white', 
     fontWeight: 'bold',
   },
 });
