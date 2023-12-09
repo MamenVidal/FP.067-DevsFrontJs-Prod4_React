@@ -65,6 +65,12 @@ const styles = StyleSheet.create({
         flex: 1,
         paddingHorizontal: 10,
     },
-});
+
+      iconContainer: {
+        backgroundColor: 'white',
+        padding: 5, // padding según necesidades
+        borderRadius: 5, // para redondear las esquinas
+      },
+    });
 
 export default InicioScreen;
