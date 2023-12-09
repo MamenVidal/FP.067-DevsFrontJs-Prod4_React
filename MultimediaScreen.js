@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { View, StyleSheet, Button, Text, TouchableOpacity } from 'react-native';
-import { Video, ResizeMode } from 'expo-av';
+import { Video } from 'expo-av';
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { environment } from './environments/environment';
@@ -63,11 +63,14 @@ const MultimediaScreen = ({ route }) => {
       style={styles.video}
       source={{ uri: videoUrl }}
       useNativeControls
-      //resizeMode="contain"
-      resizeMode={ResizeMode.CONTAIN}
+      resizeMode="contain"
       isLooping
       onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+      onReadyForDisplay={videoData => {
+        videoData.srcElement.style.position = "initial"
+      }}
     />
+
 
       {/* Albert: Modifico el elemento Button por un TouchableOpacity para poder darle estilo */}
       {/* <View style={styles.botonPersonalizado}>
