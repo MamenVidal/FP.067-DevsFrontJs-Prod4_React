@@ -67,8 +67,8 @@ export default function App() {
         />
         <Stack.Screen 
           name="MultimediaScreen" 
-          component={MultimediaScreenComponent} 
-          options={{ title: 'Video del día' }}
+          component={MultimediaScreenComponent}
+          options={{ title: 'Vídeo del día' }}
         />
       </Stack.Navigator>
     </NavigationContainer>
