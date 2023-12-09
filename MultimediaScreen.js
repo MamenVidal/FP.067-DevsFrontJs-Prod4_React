@@ -4,6 +4,8 @@ import { Video } from 'expo-av';
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { environment } from './environments/environment';
+import { Dimensions } from 'react-native';
+
 
 // Inicializar Firebase
 const app = initializeApp(environment.firebase);
@@ -15,8 +17,21 @@ const MultimediaScreen = ({ route }) => {
   const [videoUrl, setVideoUrl] = useState(null);
   const [status, setStatus] = useState({});
   const [loading, setLoading] = useState(true); 
+  const [volume, setVolume] = useState(1.0); //Volumen del video
+  const windowWidth = Dimensions.get('window').width;
+  const windowHeight = Dimensions.get('window').height;
+
 
   const { item } = route.params;
+
+  // Función para cambiar el volumen
+  const handleVolumeChange = (newVolume) => {
+    setVolume(newVolume);
+    videoRef.current.setStatusAsync({
+      volume: newVolume
+    });
+  };
+
 
   useEffect(() => {
     if (item && item.video) {
@@ -46,15 +61,16 @@ const MultimediaScreen = ({ route }) => {
 
   return (
     <View style={styles.container}>
-      <Video
-        ref={videoRef}
-        style={styles.video}
-        source={{ uri: videoUrl }}
-        useNativeControls
-        resizeMode="contain"
-        isLooping
-        onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-      />
+    <Video
+      ref={videoRef}
+      style={styles.video}
+      source={{ uri: videoUrl }}
+      useNativeControls
+      resizeMode="contain"
+      isLooping
+      onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+    />
+
       {/* Albert: Modifico el elemento Button por un TouchableOpacity para poder darle estilo */}
       {/* <View style={styles.botonPersonalizado}>
         <Button 
@@ -65,12 +81,19 @@ const MultimediaScreen = ({ route }) => {
           }
         />
       </View> */}
+      <View style={styles.buttonContainer}></View>
       <TouchableOpacity
         style={styles.botonPersonalizado}
         onPress={() => (status.isPlaying ? videoRef.current.pauseAsync() : videoRef.current.playAsync())}>
         <Text style={styles.textoBoton}>{status.isPlaying ? 'Pausa' : 'Reproducir'}</Text>
       </TouchableOpacity>
-    </View>
+      <TouchableOpacity
+          style={styles.botonPersonalizado}
+          onPress={() => handleVolumeChange(volume > 0 ? 0 : 1)}>
+          <Text style={styles.textoBoton}>{volume > 0 ? 'Silenciar' : 'Activar Sonido'}</Text>
+        </TouchableOpacity>
+      </View>
+      
   );
 };
 
@@ -104,7 +127,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    marginTop: 10,
+    marginTop: 5,
     borderRadius: 5,
     width: 200,
     backgroundColor: '#007bff',
