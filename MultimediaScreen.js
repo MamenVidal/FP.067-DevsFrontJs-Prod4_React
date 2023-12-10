@@ -29,7 +29,7 @@ const MultimediaScreen = ({ route }) => {
   };
   
   // Función para descargar el vídeo
-  const handleDownload = async () => {
+  const handleScreenChange = async () => {
     if (videoUrl) {
       try {
         const supported = await Linking.canOpenURL(videoUrl);
@@ -46,7 +46,7 @@ const MultimediaScreen = ({ route }) => {
 
   // Función para maximizar la pantalla
   // De momento no lo usamos porque no funciona
-  const handleScreenChange = async () => {
+  const handleFullScreenChange = async () => {
     if (status.isPlaying) {
       await videoRef.current.pauseAsync();
     }
@@ -137,8 +137,8 @@ const MultimediaScreen = ({ route }) => {
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.botonPersonalizado}
-          onPress={() => handleDownload()}>
-          <Text style={styles.textoBoton}>Descargar</Text>
+          onPress={() => handleScreenChange()}>
+          <Text style={styles.textoBoton}>Pantalla completa</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.botonPersonalizado}
@@ -148,13 +148,13 @@ const MultimediaScreen = ({ route }) => {
         <View style={styles.volumeButtonsContainer}>
           <TouchableOpacity
             style={styles.botonPersonalizadoMin}
-            onPress={() => handleVolumeUp()}>
-            <Text><Icon name="volume-up" size={20} color="white"/></Text>
+            onPress={() => handleVolumeDown()}>
+            <Text><Icon name="volume-down" size={20} color="white"/></Text>
           </TouchableOpacity>
           <TouchableOpacity
             style={styles.botonPersonalizadoMin}
-            onPress={() => handleVolumeDown()}>
-            <Text><Icon name="volume-down" size={20} color="white"/></Text>
+            onPress={() => handleVolumeUp()}>
+            <Text><Icon name="volume-up" size={20} color="white"/></Text>
           </TouchableOpacity>
         </View>
       </View>
