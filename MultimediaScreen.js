@@ -93,7 +93,7 @@ const MultimediaScreen = ({ route }) => {
   }
 
   if (!videoUrl) {
-    return <View style={styles.container}><Text>No hay vídeo disponible para hoy</Text></View>;
+    return <View style={styles.container}><Text style={styles.noVideo}>No hay vídeo disponible para hoy</Text></View>;
   }
 
   return (
@@ -216,6 +216,12 @@ const styles = StyleSheet.create({
   textoBoton: {
     color: 'white', 
     fontWeight: 'bold',
+  },
+  noVideo: {
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginTop: 20,
+    marginBottom: 20,
   },
 });
 
