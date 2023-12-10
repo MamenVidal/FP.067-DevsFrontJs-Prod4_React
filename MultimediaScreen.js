@@ -1,9 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, StyleSheet, Button, Text, TouchableOpacity } from 'react-native';
+import { View, StyleSheet, Text, TouchableOpacity, Linking } from 'react-native';
 import { Video } from 'expo-av';
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { environment } from './environments/environment';
+import * as ScreenOrientation from 'expo-screen-orientation';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 // Inicializar Firebase
 const app = initializeApp(environment.firebase);
@@ -20,6 +22,55 @@ const MultimediaScreen = ({ route }) => {
 
   // Función para cambiar el volumen
   const handleVolumeChange = (newVolume) => {
+    setVolume(newVolume);
+    videoRef.current.setStatusAsync({
+      volume: newVolume
+    });
+  };
+  
+  // Función para descargar el vídeo
+  const handleDownload = async () => {
+    if (videoUrl) {
+      try {
+        const supported = await Linking.canOpenURL(videoUrl);
+        if (supported) {
+          await Linking.openURL(videoUrl);
+        } else {
+          console.error("No se puede abrir el enlace de descarga.");
+        }
+      } catch (error) {
+        console.error("Error al abrir el enlace de descarga: ", error);
+      }
+    }
+  };
+
+  // Función para maximizar la pantalla
+  // De momento no lo usamos porque no funciona
+  const handleScreenChange = async () => {
+    if (status.isPlaying) {
+      await videoRef.current.pauseAsync();
+    }
+    await ScreenOrientation.unlockAsync();
+    try {
+      await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
+    } catch (error) {
+      console.error('Error al bloquear la orientación:', error);
+    }
+    await videoRef.current.playAsync();
+  };
+
+  // Función para subir el volumen
+  const handleVolumeUp = () => {
+    const newVolume = Math.min(1, volume + 0.1);
+    setVolume(newVolume);
+    videoRef.current.setStatusAsync({
+      volume: newVolume
+    });
+  };
+
+  // Función para bajar el volumen
+  const handleVolumeDown = () => {
+    const newVolume = Math.max(0, volume - 0.1);
     setVolume(newVolume);
     videoRef.current.setStatusAsync({
       volume: newVolume
@@ -78,22 +129,52 @@ const MultimediaScreen = ({ route }) => {
         />
       </View> */}
 
-      <View style={styles.buttonContainer}></View>
-      <TouchableOpacity
-        style={styles.botonPersonalizado}
-        onPress={() => (status.isPlaying ? videoRef.current.pauseAsync() : videoRef.current.playAsync())}>
-        <Text style={styles.textoBoton}>{status.isPlaying ? 'Pausa' : 'Reproducir'}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.botonPersonalizado}
-        onPress={() => handleVolumeChange(volume > 0 ? 0 : 1)}>
-        <Text style={styles.textoBoton}>{volume > 0 ? 'Silenciar' : 'Activar Sonido'}</Text>
-      </TouchableOpacity>
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity
+          style={styles.botonPersonalizado}
+          onPress={() => (status.isPlaying ? videoRef.current.pauseAsync() : videoRef.current.playAsync())}>
+          <Text style={styles.textoBoton}>{status.isPlaying ? 'Pausa' : 'Reproducir'}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.botonPersonalizado}
+          onPress={() => handleDownload()}>
+          <Text style={styles.textoBoton}>Descargar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.botonPersonalizado}
+          onPress={() => handleVolumeChange(volume > 0 ? 0 : 1)}>
+          <Text style={styles.textoBoton}>{volume > 0 ? 'Silenciar' : 'Activar sonido'}</Text>
+        </TouchableOpacity>
+        <View style={styles.volumeButtonsContainer}>
+          <TouchableOpacity
+            style={styles.botonPersonalizadoMin}
+            onPress={() => handleVolumeUp()}>
+            <Text><Icon name="volume-up" size={20} color="white"/></Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={styles.botonPersonalizadoMin}
+            onPress={() => handleVolumeDown()}>
+            <Text><Icon name="volume-down" size={20} color="white"/></Text>
+          </TouchableOpacity>
+        </View>
+      </View>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
+  buttonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+    paddingHorizontal: 10,
+    marginBottom: 10,
+  },
+  volumeButtonsContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '100%',
+  },
   container: {
     alignItems: 'center',
     justifyContent: 'center',
@@ -126,6 +207,17 @@ const styles = StyleSheet.create({
     marginTop: 5,
     borderRadius: 5,
     width: 200,
+    height: 39,
+    backgroundColor: '#007bff',
+  },
+  botonPersonalizadoMin: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 10,
+    marginTop: 5,
+    borderRadius: 5,
+    width: 98,
+    height: 39,
     backgroundColor: '#007bff',
   },
   textoBoton: {
