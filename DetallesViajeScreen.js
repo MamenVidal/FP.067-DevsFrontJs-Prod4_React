@@ -13,7 +13,6 @@ const DetallesViajeScreen = ({ route, navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [scale, setScale] = useState(1);
 
- // 
   const onPinchEvent = (event) => {
     if (event.nativeEvent.scale > 1) {
       setScale(event.nativeEvent.scale);
@@ -144,16 +143,16 @@ const styles = StyleSheet.create({
       marginBottom: 10,
     },
     botonPersonalizado: {
-      backgroundColor: '#007bff', // color de fondo
+      backgroundColor: '#007bff', 
       padding: 10,
       borderRadius: 5,
       marginTop: 15,
-      width: 200, // Ancho 
-      alignSelf: 'center', // Centra el botón en su contenedor
-      alignItems: 'center', // Centra el texto en el botón
+      width: 200,
+      alignSelf: 'center', 
+      alignItems: 'center', 
     },
     textoBoton: {
-      color: 'white', // color del texto
+      color: 'white', 
       fontWeight: 'bold',
     },
     centeredView: {

@@ -13,13 +13,12 @@ const Stack = createStackNavigator();
 export default function App() {
   
   const styles = StyleSheet.create({
-  container: {
-      flex: 1,
-      paddingHorizontal: 10,
-  },
-
+    container: {
+        flex: 1,
+        paddingHorizontal: 10,
+    },
     iconContainer: {
-      backgroundColor: 'blue',
+      backgroundColor: '#007bff',
       padding: 5,
       borderRadius: 5,
       marginRight: 10,

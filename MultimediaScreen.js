@@ -5,8 +5,6 @@ import { initializeApp } from 'firebase/app';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { environment } from './environments/environment';
 
-
-
 // Inicializar Firebase
 const app = initializeApp(environment.firebase);
 const storage = getStorage(app);
@@ -17,8 +15,7 @@ const MultimediaScreen = ({ route }) => {
   const [videoUrl, setVideoUrl] = useState(null);
   const [status, setStatus] = useState({});
   const [loading, setLoading] = useState(true); 
-  const [volume, setVolume] = useState(1.0); //Volumen del video
-
+  const [volume, setVolume] = useState(1.0); // Volumen del video
   const { item } = route.params;
 
   // Función para cambiar el volumen
@@ -28,7 +25,6 @@ const MultimediaScreen = ({ route }) => {
       volume: newVolume
     });
   };
-
 
   useEffect(() => {
     if (item && item.video) {
@@ -58,19 +54,18 @@ const MultimediaScreen = ({ route }) => {
 
   return (
     <View style={styles.container}>
-    <Video
-      ref={videoRef}
-      style={styles.video}
-      source={{ uri: videoUrl }}
-      useNativeControls
-      resizeMode="contain"
-      isLooping
-      onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-      onReadyForDisplay={videoData => {
-        videoData.srcElement.style.position = "initial"
-      }}
-    />
-
+      <Video
+        ref={videoRef}
+        style={styles.video}
+        source={{ uri: videoUrl }}
+        useNativeControls
+        resizeMode="contain"
+        isLooping
+        onPlaybackStatusUpdate={(status) => setStatus(() => status)}
+        onReadyForDisplay={videoData => {
+          videoData.srcElement.style.position = "initial"
+        }}
+      />
 
       {/* Albert: Modifico el elemento Button por un TouchableOpacity para poder darle estilo */}
       {/* <View style={styles.botonPersonalizado}>
@@ -93,9 +88,8 @@ const MultimediaScreen = ({ route }) => {
         style={styles.botonPersonalizado}
         onPress={() => handleVolumeChange(volume > 0 ? 0 : 1)}>
         <Text style={styles.textoBoton}>{volume > 0 ? 'Silenciar' : 'Activar Sonido'}</Text>
-        </TouchableOpacity>
-      </View>
-
+      </TouchableOpacity>
+    </View>
   );
 };
 
