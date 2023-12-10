@@ -28,7 +28,7 @@ const MultimediaScreen = ({ route }) => {
     });
   };
   
-  // Función para descargar el vídeo
+  {/* // Función para descargar el vídeo
   const handleScreenChange = async () => {
     if (videoUrl) {
       try {
@@ -42,22 +42,15 @@ const MultimediaScreen = ({ route }) => {
         console.error("Error al abrir el enlace de descarga: ", error);
       }
     }
-  };
+  };*/}
 
   // Función para maximizar la pantalla
-  // De momento no lo usamos porque no funciona
-  const handleFullScreenChange = async () => {
-    if (status.isPlaying) {
-      await videoRef.current.pauseAsync();
+  const handleFullScreenChange = () => {
+    if (videoRef.current) {
+      videoRef.current.presentFullscreenPlayer(); // método para activar pantalla completa
     }
-    await ScreenOrientation.unlockAsync();
-    try {
-      await ScreenOrientation.lockAsync(ScreenOrientation.OrientationLock.LANDSCAPE);
-    } catch (error) {
-      console.error('Error al bloquear la orientación:', error);
-    }
-    await videoRef.current.playAsync();
   };
+
 
   // Función para subir el volumen
   const handleVolumeUp = () => {
@@ -136,8 +129,8 @@ const MultimediaScreen = ({ route }) => {
           <Text style={styles.textoBoton}>{status.isPlaying ? 'Pausa' : 'Reproducir'}</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botonPersonalizado}
-          onPress={() => handleScreenChange()}>
+            style={styles.botonPersonalizado}
+            onPress={handleFullScreenChange}>
           <Text style={styles.textoBoton}>Pantalla completa</Text>
         </TouchableOpacity>
         <TouchableOpacity
