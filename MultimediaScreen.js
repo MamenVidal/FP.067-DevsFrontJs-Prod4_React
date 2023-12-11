@@ -4,7 +4,6 @@ import { Video } from 'expo-av';
 import { initializeApp } from 'firebase/app';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { environment } from './environments/environment';
-import * as ScreenOrientation from 'expo-screen-orientation';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 // Inicializar Firebase
@@ -20,6 +19,8 @@ const MultimediaScreen = ({ route }) => {
   const [volume, setVolume] = useState(1.0); // Volumen del video
   const { item } = route.params;
 
+  const [videoStyle, setVideoStyle] = useState(styles.video);
+
   // Función para cambiar el volumen
   const handleVolumeChange = (newVolume) => {
     setVolume(newVolume);
@@ -27,22 +28,6 @@ const MultimediaScreen = ({ route }) => {
       volume: newVolume
     });
   };
-  
-  {/* // Función para descargar el vídeo
-  const handleScreenChange = async () => {
-    if (videoUrl) {
-      try {
-        const supported = await Linking.canOpenURL(videoUrl);
-        if (supported) {
-          await Linking.openURL(videoUrl);
-        } else {
-          console.error("No se puede abrir el enlace de descarga.");
-        }
-      } catch (error) {
-        console.error("Error al abrir el enlace de descarga: ", error);
-      }
-    }
-  };*/}
 
   // Función para maximizar la pantalla
   const handleFullScreenChange = () => {
@@ -50,7 +35,7 @@ const MultimediaScreen = ({ route }) => {
       videoRef.current.presentFullscreenPlayer(); // método para activar pantalla completa
     }
   };
-
+  
 
   // Función para subir el volumen
   const handleVolumeUp = () => {
@@ -100,29 +85,19 @@ const MultimediaScreen = ({ route }) => {
     <View style={styles.container}>
       <Video
         ref={videoRef}
-        style={styles.video}
+        style={videoStyle}
+        videoStyle={styles.videoTag}
         source={{ uri: videoUrl }}
         useNativeControls
-        resizeMode="contain"
+        resizeMode="cover"
         isLooping
         onPlaybackStatusUpdate={(status) => setStatus(() => status)}
-        onReadyForDisplay={videoData => {
-          videoData.srcElement.style.position = "initial"
+        onReadyForDisplay={() => {
+          setVideoStyle({ ...styles.video, position: "initial" });
         }}
       />
 
-      {/* Albert: Modifico el elemento Button por un TouchableOpacity para poder darle estilo */}
-      {/* <View style={styles.botonPersonalizado}>
-        <Button 
-          color="#007bff"
-          title={status.isPlaying ? 'Pausa' : 'Reproducir'}
-          onPress={() =>
-            status.isPlaying ? videoRef.current.pauseAsync() : videoRef.current.playAsync()
-          }
-        />
-      </View> */}
-
-      <View style={styles.buttonContainer}>
+      <View style={styles.buttonsContainer}>
         <TouchableOpacity
           style={styles.botonPersonalizado}
           onPress={() => (status.isPlaying ? videoRef.current.pauseAsync() : videoRef.current.playAsync())}>
@@ -157,18 +132,20 @@ const MultimediaScreen = ({ route }) => {
 
 const styles = StyleSheet.create({
   buttonsContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
+    flexDirection: 'column', // Cambiado de 'row' a 'column'
+    alignItems: 'center', // Centra los botones horizontalmente
+    justifyContent: 'center', // Centra los botones verticalmente
     width: '100%',
     paddingHorizontal: 10,
-    marginBottom: 10,
+    marginTop: 5, // Agregado espacio arriba para separar del video
   },
   volumeButtonsContainer: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    width: '100%',
+    justifyContent: 'center', 
+    alignItems: 'center', 
   },
   container: {
+    flex: 1, // Asegura que el contenedor llene la pantalla
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
@@ -184,9 +161,16 @@ const styles = StyleSheet.create({
     elevation: 5,
   },
   video: {
-    marginTop: 10,
-    width: '100%',
+    maxWidth: '100%',
+    height: undefined,
     aspectRatio: 16 / 9,
+    position: 'absolute'
+  },
+  videoTag: {
+    maxWidth: '100%',
+    height: 480,
+    aspectRatio: 16 / 9,
+    position: 'relative'
   },
   buttons: {
     flexDirection: 'row',
@@ -197,7 +181,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    marginTop: 5,
+    marginTop: 10, 
     borderRadius: 5,
     width: 200,
     height: 39,
@@ -207,7 +191,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    marginTop: 5,
+    marginTop: 10,
+    marginRight: 5, 
+    marginLeft: 5,  
     borderRadius: 5,
     width: 98,
     height: 39,
