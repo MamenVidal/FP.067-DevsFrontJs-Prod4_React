@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "398595674992",
+    "project_id": "misviajes-d61aa",
+    "storage_bucket": "misviajes-d61aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398595674992:android:81deffe596c9ab8f7735b5",
+        "android_client_info": {
+          "package_name": "com.fp067.devsfrontendjs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaiEFpWX4ppJBXLHRrOCf8RcUo17Hp1z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
