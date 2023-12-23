@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:398595674992:android:81deffe596c9ab8f7735b5",
+        "mobilesdk_app_id": "1:398595674992:android:44e158309cba086c7735b5",
         "android_client_info": {
-          "package_name": "com.fp067.devsfrontendjs"
+          "package_name": "com.anonymous.misViajes"
         }
       },
       "oauth_client": [],

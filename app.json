@@ -23,10 +23,17 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.misViajes"
+      "package": "com.anonymous.misViajes",
+      "googleServicesFile": "./google-services.json"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "notification": {
+      "vapidPublicKey": "AIzaSyAVUxS20D4ilBqqK94VPNBjKjxC0UUms1I"
     }
+  },
+  "notification": {
+    "vapidPublicKey": "AIzaSyAVUxS20D4ilBqqK94VPNBjKjxC0UUms1I"
   }
 }
