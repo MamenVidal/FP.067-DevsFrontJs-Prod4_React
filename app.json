@@ -19,11 +19,12 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.anonymous.misViajes",
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      },
-      "package": "com.anonymous.misViajes"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
