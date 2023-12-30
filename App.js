@@ -130,7 +130,7 @@ async function schedulePushNotification() {
     content: {
       title: "Tienes un mensaje! 📬",
       body: 'Aquí va el mensaje de la notificación.',
-      data: { data: 'funciona!' },
+      data: { data: 'goes here' },
     },
     trigger: { seconds: 2 },
   });
