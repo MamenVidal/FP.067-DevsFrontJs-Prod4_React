@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "398595674992",
+    "firebase_url": "https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "misviajes-d61aa",
+    "storage_bucket": "misviajes-d61aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398595674992:android:44e158309cba086c7735b5",
+        "android_client_info": {
+          "package_name": "com.anonymous.misViajes"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaiEFpWX4ppJBXLHRrOCf8RcUo17Hp1z4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
