@@ -1,4 +1,9 @@
 import { initializeApp } from 'firebase/app';
+import { environment } from './environments/environment';
+import { connectFirestoreEmulator } from 'firebase/firestore';
+import { connectStorageEmulator } from 'firebase/storage';
+import { connectFunctionsEmulator } from 'firebase/functions';
+
 
 // Optionally import the services that you want to use
 // import {...} from "firebase/auth";
@@ -22,27 +27,15 @@ import {
 import { getStorage, provideStorage } from "firebase/storage";
 
 // Initialize Firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyAVUxS20D4ilBqqK94VPNBjKjxC0UUms1I",
-  authDomain: "misviajes-d61aa.firebaseapp.com",
-  databaseURL: 'https://misviajes-d61aa.firebaseapp.com',
-  projectId: "misviajes-d61aa",
-  storageBucket: "misviajes-d61aa.appspot.com",
-  messagingSenderId: "398595674992",
-  appId: "1:398595674992:web:1b573fde23396d497735b5",
-  measurementId: "G-YZZECZZEPY",
-};
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+const app = initializeApp(environment.firebase);
 const firestore = getFirestore(app);
-// For more information on how to access Firebase in your project,
-// see the Firebase documentation: https://firebase.google.com/docs/web/setup#access-firebase
+if (environment.useEmulators) {
+  connectFirestoreEmulator(firestore, environment.emulatorConfig.firestore.host, environment.emulatorConfig.firestore.port);
+}
 
 // Read collection from Firestore and print it
-const querySnapshot = getDocs(collection(db, "MiViaje"));
-console.log(querySnapshot);
+const querySnapshot = getDocs(collection(firestore, "MiViaje"));
 
 export {
-  db
+  firestore
 }

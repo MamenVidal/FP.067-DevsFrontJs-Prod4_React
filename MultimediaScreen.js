@@ -5,10 +5,17 @@ import { initializeApp } from 'firebase/app';
 import { getStorage, ref as storageRef, getDownloadURL } from 'firebase/storage';
 import { environment } from './environments/environment';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { connectFirestoreEmulator } from 'firebase/firestore';
+import { connectStorageEmulator } from 'firebase/storage';
+import { connectFunctionsEmulator } from 'firebase/functions';
+
 
 // Inicializar Firebase
 const app = initializeApp(environment.firebase);
 const storage = getStorage(app);
+if (environment.useEmulators) {
+  connectStorageEmulator(storage, environment.emulatorConfig.storage.host, environment.emulatorConfig.storage.port);
+}
 
 // Pantalla de reproducción de video
 const MultimediaScreen = ({ route }) => {

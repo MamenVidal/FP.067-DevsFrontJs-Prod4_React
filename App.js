@@ -59,21 +59,6 @@ export default function App() {
 
   return (
     <View style={{ flex: 1 }}>
-      {/* Bloque de notificaciones */}
-      <View style={{ alignItems: 'center', justifyContent: 'space-around' }}>
-        <Text>Your expo push token: {expoPushToken}</Text>
-        <View style={{ alignItems: 'center', justifyContent: 'center' }}>
-          <Text>Title: {notification && notification.request.content.title}</Text>
-          <Text>Body: {notification && notification.request.content.body}</Text>
-          <Text>Data: {notification && JSON.stringify(notification.request.content.data)}</Text>
-        </View>
-        <Button
-          title="Clic para recibir notificación"
-          onPress={async () => {
-            await schedulePushNotification();
-          }}
-        />
-      </View>
         <NavigationContainer>
           <Stack.Navigator
             screenOptions={({ navigation }) => ({
@@ -119,6 +104,21 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
+      {/* Bloque de notificaciones */}
+      <View style={{ alignItems: 'center', justifyContent: 'space-around', marginTop: 10  }}>
+        <Text style={{ lineHeight: 24 }}>Your expo push token: {expoPushToken}</Text>
+        <View style={{ alignItems: 'center', justifyContent: 'center'}}>
+          <Text style={{ lineHeight: 24 }}>Title: {notification && notification.request.content.title}</Text>
+          <Text style={{ lineHeight: 24 }}>Body: {notification && notification.request.content.body}</Text>
+          <Text style={{ lineHeight: 24 }}>Data: {notification && JSON.stringify(notification.request.content.data)}</Text>
+        </View>
+        <Button
+          title="Clic para recibir notificación"
+          onPress={async () => {
+            await schedulePushNotification();
+          }}
+        />
+      </View>
     </View>
     
   );

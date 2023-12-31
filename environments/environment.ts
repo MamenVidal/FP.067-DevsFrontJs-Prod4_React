@@ -9,5 +9,20 @@ export const environment = {
         messagingSenderId: "398595674992",
         appId: "1:398595674992:web:1b573fde23396d497735b5",
         measurementId: "G-YZZECZZEPY"
+    },
+    useEmulators: false, // Cambiar a true para usar emuladores
+    emulatorConfig: { // Y esta sección para configurar los emuladores
+        firestore: {
+            host: 'localhost',
+            port: 8080
+        },
+        functions: {
+            host: 'localhost',
+            port: 5001
+        },
+        storage: {
+            host: 'localhost',
+            port: 9199
+        }
     }
 };

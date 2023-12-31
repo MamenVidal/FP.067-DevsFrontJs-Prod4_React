@@ -4,10 +4,17 @@ import TarjetaViaje from './TarjetaViaje';
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs, query, orderBy } from 'firebase/firestore';
 import { environment } from './environments/environment';
+import { connectFirestoreEmulator } from 'firebase/firestore';
+import { connectStorageEmulator } from 'firebase/storage';
+import { connectFunctionsEmulator } from 'firebase/functions';
+
 
 // Inicializar Firebase
 const app = initializeApp(environment.firebase);
 const firestore = getFirestore(app);
+if (environment.useEmulators) {
+  connectFirestoreEmulator(firestore, environment.emulatorConfig.firestore.host, environment.emulatorConfig.firestore.port);
+}
 
 class InicioScreen extends Component {
   constructor(props) {
