@@ -1,64 +1,73 @@
-[debug] [2023-12-31T14:52:52.334Z] ----------------------------------------------------------------------
-[debug] [2023-12-31T14:52:52.335Z] Command:       /Users/mamenvidal/.nvm/versions/node/v18.19.0/bin/node /opt/homebrew/bin/firebase emulators:start
-[debug] [2023-12-31T14:52:52.335Z] CLI Version:   13.0.2
-[debug] [2023-12-31T14:52:52.335Z] Platform:      darwin
-[debug] [2023-12-31T14:52:52.336Z] Node Version:  v18.19.0
-[debug] [2023-12-31T14:52:52.337Z] Time:          Sun Dec 31 2023 15:52:52 GMT+0100 (GMT+01:00)
-[debug] [2023-12-31T14:52:52.337Z] ----------------------------------------------------------------------
+[debug] [2024-01-03T08:44:12.469Z] ----------------------------------------------------------------------
+[debug] [2024-01-03T08:44:12.470Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2024-01-03T08:44:12.471Z] CLI Version:   13.0.2
+[debug] [2024-01-03T08:44:12.471Z] Platform:      win32
+[debug] [2024-01-03T08:44:12.471Z] Node Version:  v18.17.0
+[debug] [2024-01-03T08:44:12.472Z] Time:          Wed Jan 03 2024 09:44:12 GMT+0100 (hora estándar de Europa central)
+[debug] [2024-01-03T08:44:12.472Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2023-12-31T14:52:52.419Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2023-12-31T14:52:52.419Z] > authorizing via signed-in user (mvidalda@uoc.edu)
-[debug] [2023-12-31T14:52:52.479Z] openjdk version "17.0.6" 2023-01-17
-OpenJDK Runtime Environment Temurin-17.0.6+10 (build 17.0.6+10)
-OpenJDK 64-Bit Server VM Temurin-17.0.6+10 (build 17.0.6+10, mixed mode)
+[debug] [2024-01-03T08:44:12.474Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-01-03T08:44:12.555Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-03T08:44:12.555Z] > authorizing via signed-in user (mvidalda@uoc.edu)
+[debug] [2024-01-03T08:44:12.629Z] openjdk version "17.0.9" 2023-10-17 LTS
 
-[debug] [2023-12-31T14:52:52.481Z] Parsed Java major version: 17
+[debug] [2024-01-03T08:44:12.629Z] OpenJDK Runtime Environment Microsoft-8552009 (build 17.0.9+8-LTS)
+OpenJDK 64-Bit Server VM Microsoft-8552009 (build 17.0.9+8-LTS, mixed mode, sharing)
+
+[debug] [2024-01-03T08:44:12.655Z] Parsed Java major version: 17
 [info] i  emulators: Starting emulators: functions, firestore, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, storage"}}
-[debug] [2023-12-31T14:52:53.031Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-31T14:52:53.031Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-31T14:52:53.031Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-31T14:52:53.031Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-31T14:52:53.031Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
-[debug] [2023-12-31T14:52:53.037Z] [hub] writing locator at /var/folders/2p/cx8v1m2x03zg5lrny1l3zcq40000gn/T/hub-misviajes-d61aa.json
-[debug] [2023-12-31T14:52:53.230Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-31T14:52:53.231Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
-[debug] [2023-12-31T14:52:53.231Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
-[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, database, hosting, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, database, hosting, pubsub\u001b[22m"}}
-[debug] [2023-12-31T14:52:53.234Z] defaultcredentials: writing to file /Users/mamenvidal/.config/firebase/mvidalda_uoc_edu_application_default_credentials.json
-[debug] [2023-12-31T14:52:53.236Z] Setting GAC to /Users/mamenvidal/.config/firebase/mvidalda_uoc_edu_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/mamenvidal/.config/firebase/mvidalda_uoc_edu_application_default_credentials.json"}}
-[debug] [2023-12-31T14:52:53.237Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig [none]
-[debug] [2023-12-31T14:52:54.017Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig 200
-[debug] [2023-12-31T14:52:54.017Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig {"projectId":"misviajes-d61aa","databaseURL":"https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"misviajes-d61aa.appspot.com","locationId":"europe-west"}
-[debug] [2023-12-31T14:52:54.033Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-12-31T14:52:54.033Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
-[debug] [2023-12-31T14:52:54.033Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/mamenvidal/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","misviajes-d61aa","--rules","/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/mamenvidal/.cache/firebase/emulators/cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"misviajes-d61aa\",\"--rules\",\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
+[debug] [2024-01-03T08:44:12.663Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-01-03T08:44:12.664Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-01-03T08:44:12.664Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-01-03T08:44:12.664Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-01-03T08:44:12.664Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2024-01-03T08:44:12.690Z] [hub] writing locator at C:\Users\ximen\AppData\Local\Temp\hub-misviajes-d61aa.json
+[debug] [2024-01-03T08:44:12.697Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-01-03T08:44:12.697Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-01-03T08:44:12.697Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, database, hosting, pubsub {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, database, hosting, pubsub\u001b[22m"}}
+[debug] [2024-01-03T08:44:12.700Z] defaultcredentials: writing to file C:\Users\ximen\AppData\Roaming\firebase\mvidalda_uoc_edu_application_default_credentials.json
+[debug] [2024-01-03T08:44:12.701Z] Setting GAC to C:\Users\ximen\AppData\Roaming\firebase\mvidalda_uoc_edu_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\ximen\\AppData\\Roaming\\firebase\\mvidalda_uoc_edu_application_default_credentials.json"}}
+[debug] [2024-01-03T08:44:12.702Z] > refreshing access token with scopes: []
+[debug] [2024-01-03T08:44:12.703Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-03T08:44:12.703Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-03T08:44:12.804Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-01-03T08:44:12.804Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-03T08:44:12.815Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig [none]
+[debug] [2024-01-03T08:44:12.844Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-01-03T08:44:12.844Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2024-01-03T08:44:13.279Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig 200
+[debug] [2024-01-03T08:44:13.279Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig {"projectId":"misviajes-d61aa","databaseURL":"https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"misviajes-d61aa.appspot.com","locationId":"europe-west"}
+[debug] [2024-01-03T08:44:13.293Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-01-03T08:44:13.293Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2024-01-03T08:44:13.293Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","C:\\Users\\ximen\\.cache\\firebase\\emulators\\cloud-firestore-emulator-v1.18.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","misviajes-d61aa","--rules","C:\\Users\\ximen\\Desktop\\FP067_DevsFrontJs\\Producto4\\firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"C:\\\\Users\\\\ximen\\\\.cache\\\\firebase\\\\emulators\\\\cloud-firestore-emulator-v1.18.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"misviajes-d61aa\",\"--rules\",\"C:\\\\Users\\\\ximen\\\\Desktop\\\\FP067_DevsFrontJs\\\\Producto4\\\\firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false}"}}
 [info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
-[debug] [2023-12-31T14:52:54.669Z] Dec 31, 2023 3:52:54 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+[debug] [2024-01-03T08:44:14.369Z] Jan 03, 2024 9:44:14 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
 INFO: Started WebSocket server on ws://127.0.0.1:9150
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:52:54 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
-[debug] [2023-12-31T14:52:54.680Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
-[debug] [2023-12-31T14:52:54.681Z] 127.0.0.1:8080
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 03, 2024 9:44:14 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\r\nINFO: Started WebSocket server on ws://127.0.0.1:9150\r\n"}}
+[debug] [2024-01-03T08:44:14.407Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2024-01-03T08:44:14.408Z] 127.0.0.1:8080
 If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
 
    export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
 
 Dev App Server is now running.
 
- {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\n"}}
-[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
-[debug] [2023-12-31T14:52:54.797Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-12-31T14:52:55.293Z] Temp file directory for storage emulator: /var/folders/2p/cx8v1m2x03zg5lrny1l3zcq40000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/2p/cx8v1m2x03zg5lrny1l3zcq40000gn/T/firebase/storage/blobs"}}
-[debug] [2023-12-31T14:52:55.300Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
-[debug] [2023-12-31T14:52:55.300Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
-[debug] [2023-12-31T14:52:55.300Z] Starting Emulator UI with command {"binary":"node","args":["/Users/mamenvidal/.cache/firebase/emulators/ui-v1.11.7/server/server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/mamenvidal/.cache/firebase/emulators/ui-v1.11.7/server/server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\r\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\r\n"}}
+[info] +  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2024-01-03T08:44:14.600Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-01-03T08:44:15.278Z] Temp file directory for storage emulator: C:\Users\ximen\AppData\Local\Temp/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: C:\\Users\\ximen\\AppData\\Local\\Temp/firebase/storage/blobs"}}
+[debug] [2024-01-03T08:44:15.295Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2024-01-03T08:44:15.295Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2024-01-03T08:44:15.295Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\ximen\\.cache\\firebase\\emulators\\ui-v1.11.7\\server\\server.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\ximen\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.11.7\\\\server\\\\server.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
 [info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
-[debug] [2023-12-31T14:52:55.387Z] Web / API server started at 127.0.0.1:4000
+[debug] [2024-01-03T08:44:15.559Z] Web / API server started at 127.0.0.1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at 127.0.0.1:4000\n"}}
-[debug] [2023-12-31T14:52:55.387Z] Web / API server started at ::1:4000
+[debug] [2024-01-03T08:44:15.559Z] Web / API server started at ::1:4000
  {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at ::1:4000\n"}}
-[info] i  functions: Watching "/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions\" for Cloud Functions..."}}
-[debug] [2023-12-31T14:52:55.558Z] Validating nodejs source
-[debug] [2023-12-31T14:52:56.862Z] > [functions] package.json contents: {
+[info] i  functions: Watching "C:\Users\ximen\Desktop\FP067_DevsFrontJs\Producto4\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"C:\\Users\\ximen\\Desktop\\FP067_DevsFrontJs\\Producto4\\functions\" for Cloud Functions..."}}
+[debug] [2024-01-03T08:44:15.562Z] Validating nodejs source
+[debug] [2024-01-03T08:44:16.522Z] > [functions] package.json contents: {
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "scripts": {
@@ -84,18 +93,47 @@ Dev App Server is now running.
   },
   "private": true
 }
-[debug] [2023-12-31T14:52:56.862Z] Building nodejs source
-[debug] [2023-12-31T14:52:56.862Z] Failed to find version of module node: reached end of search path /Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules
-[info] ✔  functions: Using node@18 from host. 
-[debug] [2023-12-31T14:52:56.864Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-12-31T14:52:56.868Z] Found firebase-functions binary at '/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/.bin/firebase-functions'
-[debug] [2023-12-31T14:52:56.871Z] Dec 31, 2023 3:52:56 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
-INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:52:56 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[info] Serving at port 8839
+[debug] [2024-01-03T08:44:16.522Z] Building nodejs source
+[debug] [2024-01-03T08:44:16.522Z] Failed to find version of module node: reached end of search path C:\Users\ximen\Desktop\FP067_DevsFrontJs\Producto4\functions\node_modules
+[info] +  functions: Using node@18 from host. 
+[debug] [2024-01-03T08:44:16.524Z] Could not find functions.yaml. Must use http discovery
+[debug] [2024-01-03T08:44:16.530Z] Found firebase-functions binary at 'C:\Users\ximen\Desktop\FP067_DevsFrontJs\Producto4\functions\node_modules\.bin\firebase-functions'
+[info] Serving at port 8262
 
-[debug] [2023-12-31T14:52:57.157Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
-[info] ✔  functions: Loaded functions definitions from source: . {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: ."}}
+[debug] [2024-01-03T08:44:20.150Z] Got response from /__/functions.yaml {"endpoints":{"addmessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addmessage"},"makeuppercase":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"eventTrigger":{"eventType":"google.cloud.firestore.document.v1.created","eventFilters":{"database":"(default)","namespace":"(default)"},"eventFilterPathPatterns":{"document":"messages/{documentId}"},"retry":false},"entryPoint":"makeuppercase"},"onDocumentWrite":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.write","eventFilters":{"resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}"},"retry":false},"labels":{},"entryPoint":"onDocumentWrite"},"onDocumentUpdated":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}"},"retry":false},"labels":{},"entryPoint":"onDocumentUpdated"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[info] +  functions: Loaded functions definitions from source: addmessage, makeuppercase, onDocumentWrite, onDocumentUpdated. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: addmessage, makeuppercase, onDocumentWrite, onDocumentUpdated."}}
+[info] +  functions[us-central1-addmessage]: http function initialized (http://127.0.0.1:5001/misviajes-d61aa/us-central1/addmessage). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/misviajes-d61aa/us-central1/addmessage)."}}
+[debug] [2024-01-03T08:44:20.166Z] Found a v2 firestore trigger.
+[debug] [2024-01-03T08:44:20.166Z] addFirestoreTrigger "{\"eventType\":\"google.cloud.firestore.document.v1.created\",\"database\":\"(default)\",\"namespace\":\"(default)\",\"document\":{\"value\":\"messages/{documentId}\",\"matchType\":\"PATH_PATTERN\"}}"
+[debug] [2024-01-03T08:44:20.166Z] >>> [apiv2][query] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 [none]
+[debug] [2024-01-03T08:44:20.166Z] >>> [apiv2][body] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 "{\"eventType\":\"google.cloud.firestore.document.v1.created\",\"database\":\"(default)\",\"namespace\":\"(default)\",\"document\":{\"value\":\"messages/{documentId}\",\"matchType\":\"PATH_PATTERN\"}}"
+[debug] [2024-01-03T08:44:20.170Z] Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2024-01-03T08:44:20.297Z] Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected HTTP/2 connection.\r\n"}}
+[debug] [2024-01-03T08:44:20.743Z] <<< [apiv2][status] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 200
+[debug] [2024-01-03T08:44:20.744Z] <<< [apiv2][body] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 {"eventType":"google.cloud.firestore.document.v1.created","database":"(default)","namespace":"(default)","document":{"value":"messages/{documentId}","matchType":"PATH_PATTERN"}}
+[info] +  functions[us-central1-makeuppercase]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
+[debug] [2024-01-03T08:44:20.744Z] addFirestoreTrigger "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2024-01-03T08:44:20.744Z] >>> [apiv2][query] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 [none]
+[debug] [2024-01-03T08:44:20.744Z] >>> [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2024-01-03T08:44:20.746Z] Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2024-01-03T08:44:20.755Z] <<< [apiv2][status] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 200
+[debug] [2024-01-03T08:44:20.755Z] <<< [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 {}
+[info] +  functions[us-central1-onDocumentWrite]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
+[debug] [2024-01-03T08:44:20.755Z] addFirestoreTrigger "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2024-01-03T08:44:20.756Z] >>> [apiv2][query] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 [none]
+[debug] [2024-01-03T08:44:20.756Z] >>> [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
+[debug] [2024-01-03T08:44:20.757Z] Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 03, 2024 9:44:20 AM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\r\nINFO: Detected non-HTTP/2 connection.\r\n"}}
+[debug] [2024-01-03T08:44:20.762Z] <<< [apiv2][status] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 200
+[debug] [2024-01-03T08:44:20.763Z] <<< [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 {}
+[info] +  functions[us-central1-onDocumentUpdated]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
 [info] 
 ┌─────────────────────────────────────────────────────────────┐
 │ ✔  All emulators ready! It is now safe to connect your app. │
@@ -116,742 +154,9 @@ INFO: Connected to new websocket client
 
 Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
  
-[debug] [2023-12-31T14:53:08.087Z] Dec 31, 2023 3:53:08 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
-INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:53:08 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2023-12-31T14:53:09.653Z] Dec 31, 2023 3:53:09 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+[debug] [2024-01-03T08:44:37.008Z] Jan 03, 2024 9:44:37 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
 INFO: Connected to new websocket client
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:53:09 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
-[debug] [2023-12-31T14:54:10.431Z] File /Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/index.js changed, reloading triggers {"metadata":{"emulator":{"name":"functions"},"message":"File /Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/index.js changed, reloading triggers"}}
-[debug] [2023-12-31T14:54:11.434Z] Validating nodejs source
-[debug] [2023-12-31T14:54:12.071Z] > [functions] package.json contents: {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
-  "scripts": {
-    "lint": "eslint .",
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
-  },
-  "engines": {
-    "node": "18"
-  },
-  "main": "index.js",
-  "dependencies": {
-    "firebase-admin": "^11.8.0",
-    "firebase-functions": "^4.3.1"
-  },
-  "devDependencies": {
-    "eslint": "^8.15.0",
-    "eslint-config-google": "^0.14.0",
-    "firebase-functions-test": "^3.1.0"
-  },
-  "private": true
-}
-[debug] [2023-12-31T14:54:12.071Z] Building nodejs source
-[debug] [2023-12-31T14:54:12.071Z] Failed to find version of module node: reached end of search path /Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules
-[info] ✔  functions: Using node@18 from host. 
-[debug] [2023-12-31T14:54:12.072Z] Could not find functions.yaml. Must use http discovery
-[debug] [2023-12-31T14:54:12.072Z] Found firebase-functions binary at '/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/.bin/firebase-functions'
-[info] Serving at port 8229
-
-[debug] [2023-12-31T14:54:12.320Z] Got response from /__/functions.yaml {"endpoints":{"addmessage":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"addmessage"},"makeuppercase":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"eventTrigger":{"eventType":"google.cloud.firestore.document.v1.created","eventFilters":{"database":"(default)","namespace":"(default)"},"eventFilterPathPatterns":{"document":"messages/{documentId}"},"retry":false},"entryPoint":"makeuppercase"},"onDocumentWrite":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.write","eventFilters":{"resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}"},"retry":false},"labels":{},"entryPoint":"onDocumentWrite"},"onDocumentUpdated":{"platform":"gcfv1","availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"serviceAccountEmail":null,"vpc":null,"eventTrigger":{"eventType":"providers/cloud.firestore/eventTypes/document.update","eventFilters":{"resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}"},"retry":false},"labels":{},"entryPoint":"onDocumentUpdated"}},"specVersion":"v1alpha1","requiredAPIs":[]}
-[info] ✔  functions: Loaded functions definitions from source: addmessage, makeuppercase, onDocumentWrite, onDocumentUpdated. {"metadata":{"emulator":{"name":"functions"},"message":"Loaded functions definitions from source: addmessage, makeuppercase, onDocumentWrite, onDocumentUpdated."}}
-[info] ✔  functions[us-central1-addmessage]: http function initialized (http://127.0.0.1:5001/misviajes-d61aa/us-central1/addmessage). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://127.0.0.1:5001/misviajes-d61aa/us-central1/addmessage)."}}
-[debug] [2023-12-31T14:54:12.330Z] Found a v2 firestore trigger.
-[debug] [2023-12-31T14:54:12.330Z] addFirestoreTrigger "{\"eventType\":\"google.cloud.firestore.document.v1.created\",\"database\":\"(default)\",\"namespace\":\"(default)\",\"document\":{\"value\":\"messages/{documentId}\",\"matchType\":\"PATH_PATTERN\"}}"
-[debug] [2023-12-31T14:54:12.330Z] >>> [apiv2][query] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 [none]
-[debug] [2023-12-31T14:54:12.330Z] >>> [apiv2][body] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 "{\"eventType\":\"google.cloud.firestore.document.v1.created\",\"database\":\"(default)\",\"namespace\":\"(default)\",\"document\":{\"value\":\"messages/{documentId}\",\"matchType\":\"PATH_PATTERN\"}}"
-[debug] [2023-12-31T14:54:12.334Z] Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:54:12.445Z] Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:54:12.844Z] <<< [apiv2][status] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 200
-[debug] [2023-12-31T14:54:12.844Z] <<< [apiv2][body] POST http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/eventarcTrigger?eventarcTriggerId=us-central1-makeuppercase-0 {"eventType":"google.cloud.firestore.document.v1.created","database":"(default)","namespace":"(default)","document":{"value":"messages/{documentId}","matchType":"PATH_PATTERN"}}
-[info] ✔  functions[us-central1-makeuppercase]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
-[debug] [2023-12-31T14:54:12.845Z] addFirestoreTrigger "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
-[debug] [2023-12-31T14:54:12.845Z] >>> [apiv2][query] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 [none]
-[debug] [2023-12-31T14:54:12.845Z] >>> [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
-[debug] [2023-12-31T14:54:12.848Z] Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:54:12.855Z] <<< [apiv2][status] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 200
-[debug] [2023-12-31T14:54:12.855Z] <<< [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 {}
-[info] ✔  functions[us-central1-onDocumentWrite]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
-[debug] [2023-12-31T14:54:12.856Z] addFirestoreTrigger "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
-[debug] [2023-12-31T14:54:12.856Z] >>> [apiv2][query] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 [none]
-[debug] [2023-12-31T14:54:12.856Z] >>> [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 "{\"eventTrigger\":{\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/{docId}\",\"service\":\"firestore.googleapis.com\"}}"
-[debug] [2023-12-31T14:54:12.858Z] Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:54:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:54:12.862Z] <<< [apiv2][status] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 200
-[debug] [2023-12-31T14:54:12.863Z] <<< [apiv2][body] PUT http://127.0.0.1:8080/emulator/v1/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 {}
-[info] ✔  functions[us-central1-onDocumentUpdated]: firestore function initialized. {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mfirestore\u001b[22m function initialized."}}
-[debug] [2023-12-31T14:54:44.342Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig [none]
-[debug] [2023-12-31T14:54:45.246Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig 200
-[debug] [2023-12-31T14:54:45.247Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/misviajes-d61aa/adminSdkConfig {"projectId":"misviajes-d61aa","databaseURL":"https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"misviajes-d61aa.appspot.com","locationId":"europe-west"}
-[debug] [2023-12-31T14:58:21.745Z] Dec 31, 2023 3:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:58:21.993Z] Dec 31, 2023 3:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:58:21.994Z] Dec 31, 2023 3:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:58:21 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:58:55.447Z] Dec 31, 2023 3:58:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:58:55 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:08.303Z] Dec 31, 2023 3:59:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:08.324Z] Dec 31, 2023 3:59:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:08.335Z] Dec 31, 2023 3:59:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:19.718Z] Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:19.746Z] Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:19.754Z] Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:19.822Z] [work-queue] {"queuedWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T14:59:19.822Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T14:59:19.823Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T14:59:19.822Z"],"workRunningCount":1}
-[debug] [2023-12-31T14:59:19.823Z] Accepted request POST /functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 --> us-central1-onDocumentWrite-0
-[debug] [2023-12-31T14:59:19.826Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-12-31T14:59:19.826Z] [functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/"}}
-[debug] [2023-12-31T14:59:19.833Z] [worker-pool] addWorker(us-central1-onDocumentWrite) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-onDocumentWrite)"}}
-[debug] [2023-12-31T14:59:19.834Z] [worker-pool] Adding worker with key us-central1-onDocumentWrite, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-onDocumentWrite, total=1"}}
-[debug] [2023-12-31T14:59:19.835Z] Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:19.847Z] Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:19.900Z] Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 3:59:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T14:59:20.611Z] [runtime-status] [79519] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js\"}"}}
-[debug] [2023-12-31T14:59:20.611Z] [runtime-status] [79519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T14:59:20.611Z] [runtime-status] [79519] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
-[debug] [2023-12-31T14:59:20.612Z] [runtime-status] [79519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T14:59:20.765Z] [runtime-status] [79519] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Checked functions.config() {\"config\":{}}"}}
-[debug] [2023-12-31T14:59:20.765Z] [runtime-status] [79519] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
-[debug] [2023-12-31T14:59:20.765Z] [runtime-status] [79519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T14:59:20.765Z] [runtime-status] [79519] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js\"}"}}
-[debug] [2023-12-31T14:59:20.767Z] [runtime-status] [79519] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T14:59:20.767Z] [runtime-status] [79519] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
-[debug] [2023-12-31T14:59:20.771Z] [runtime-status] [79519] initializeApp(DEFAULT) {"storageBucket":"misviajes-d61aa.appspot.com","databaseURL":"https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app","projectId":"misviajes-d61aa"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] initializeApp(DEFAULT) {\"storageBucket\":\"misviajes-d61aa.appspot.com\",\"databaseURL\":\"https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app\",\"projectId\":\"misviajes-d61aa\"}"}}
-[debug] [2023-12-31T14:59:20.780Z] [runtime-status] [79519] Functions runtime initialized. {"cwd":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions","node_version":"18.19.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Functions runtime initialized. {\"cwd\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions\",\"node_version\":\"18.19.0\"}"}}
-[debug] [2023-12-31T14:59:20.780Z] [runtime-status] [79519] Listening to port: /var/folders/2p/cx8v1m2x03zg5lrny1l3zcq40000gn/T/fire_emu_431997d2b8d62ecf.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] Listening to port: /var/folders/2p/cx8v1m2x03zg5lrny1l3zcq40000gn/T/fire_emu_431997d2b8d62ecf.sock"}}
-[debug] [2023-12-31T14:59:20.853Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE"}}
-[debug] [2023-12-31T14:59:20.853Z] [worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite)"}}
-[info] i  functions: Beginning execution of "us-central1-onDocumentWrite" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Beginning execution of \"us-central1-onDocumentWrite\""}}
-[debug] [2023-12-31T14:59:20.854Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY"}}
-[debug] [2023-12-31T14:59:20.863Z] [runtime-status] [79519] ProcessBackground: lifting resource.name from resource {"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","service":"firestore.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"service\":\"firestore.googleapis.com\"}"}}
-[debug] [2023-12-31T14:59:20.863Z] [runtime-status] [79519] RunBackground {"data":{"value":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T14:59:19.782754Z"},"updateMask":{}},"context":{"eventId":"2dc4c50e-51ef-43c7-9c48-a25a32579116","timestamp":"2023-12-31T14:59:19.782754Z","eventType":"providers/cloud.firestore/eventTypes/document.write","resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] RunBackground {\"data\":{\"value\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T14:59:19.782754Z\"},\"updateMask\":{}},\"context\":{\"eventId\":\"2dc4c50e-51ef-43c7-9c48-a25a32579116\",\"timestamp\":\"2023-12-31T14:59:19.782754Z\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\"}}"}}
-[info] >  Notificación enviada exitosamente: projects/misviajes-d61aa/messages/8608849392723463913 { {"user":"Notificación enviada exitosamente: projects/misviajes-d61aa/messages/8608849392723463913 {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m Notificación enviada exitosamente: projects/misviajes-d61aa/messages/8608849392723463913 {"}}
-[info] >    notification: { {"user":"  notification: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   notification: {"}}
-[info] >      title: 'Documento Cambiado onDocumentWrite', {"user":"    title: 'Documento Cambiado onDocumentWrite',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     title: 'Documento Cambiado onDocumentWrite',"}}
-[info] >      body: 'Datos finales: {}' {"user":"    body: 'Datos finales: {}'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     body: 'Datos finales: {}'"}}
-[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
-[info] >    topic: 'viajes' {"user":"  topic: 'viajes'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   topic: 'viajes'"}}
-[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
-[debug] [2023-12-31T14:59:21.895Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=pause"}}
-[info] i  functions: Finished "us-central1-onDocumentWrite" in 1041.218084ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finished \"us-central1-onDocumentWrite\" in 1041.218084ms"}}
-[debug] [2023-12-31T14:59:21.895Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE"}}
-[debug] [2023-12-31T14:59:21.895Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=finish"}}
-[debug] [2023-12-31T14:59:21.895Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=close"}}
-[debug] [2023-12-31T14:59:21.895Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:00:08.384Z] Dec 31, 2023 4:00:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:00:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:00:08.402Z] Dec 31, 2023 4:00:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:00:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:00:08.410Z] Dec 31, 2023 4:00:08 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:00:08 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:00:09.996Z] Dec 31, 2023 4:00:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:00:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:00:19.824Z] Dec 31, 2023 4:00:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:00:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:00:19.830Z] Dec 31, 2023 4:00:19 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:00:19 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:00:19.929Z] Dec 31, 2023 4:00:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:00:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:19.956Z] Dec 31, 2023 4:01:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:19 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:26.968Z] Dec 31, 2023 4:01:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:34.390Z] Dec 31, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:34.401Z] Dec 31, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:34.408Z] Dec 31, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:34.439Z] [work-queue] {"queuedWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T15:01:34.439Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:01:34.440Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T15:01:34.439Z"],"workRunningCount":1}
-[debug] [2023-12-31T15:01:34.440Z] Accepted request POST /functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 --> us-central1-onDocumentWrite-0
-[debug] [2023-12-31T15:01:34.442Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-12-31T15:01:34.442Z] [functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/"}}
-[debug] [2023-12-31T15:01:34.442Z] [worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite)"}}
-[info] i  functions: Beginning execution of "us-central1-onDocumentWrite" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Beginning execution of \"us-central1-onDocumentWrite\""}}
-[debug] [2023-12-31T15:01:34.443Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY"}}
-[debug] [2023-12-31T15:01:34.445Z] [runtime-status] [79519] ProcessBackground: lifting resource.name from resource {"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","service":"firestore.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"service\":\"firestore.googleapis.com\"}"}}
-[debug] [2023-12-31T15:01:34.445Z] [runtime-status] [79519] RunBackground {"data":{"value":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:01:34.432123Z"},"oldValue":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T14:59:19.782754Z"},"updateMask":{}},"context":{"eventId":"d2639da9-469c-483e-8109-0402c83124cb","timestamp":"2023-12-31T15:01:34.432123Z","eventType":"providers/cloud.firestore/eventTypes/document.write","resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] RunBackground {\"data\":{\"value\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:01:34.432123Z\"},\"oldValue\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T14:59:19.782754Z\"},\"updateMask\":{}},\"context\":{\"eventId\":\"d2639da9-469c-483e-8109-0402c83124cb\",\"timestamp\":\"2023-12-31T15:01:34.432123Z\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\"}}"}}
-[info] >  Notificación enviada exitosamente: projects/misviajes-d61aa/messages/6476075068684272082 { {"user":"Notificación enviada exitosamente: projects/misviajes-d61aa/messages/6476075068684272082 {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m Notificación enviada exitosamente: projects/misviajes-d61aa/messages/6476075068684272082 {"}}
-[info] >    notification: { {"user":"  notification: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   notification: {"}}
-[info] >      title: 'Documento Cambiado onDocumentWrite', {"user":"    title: 'Documento Cambiado onDocumentWrite',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     title: 'Documento Cambiado onDocumentWrite',"}}
-[info] >      body: 'Datos finales: {"nombre":"prueba"}' {"user":"    body: 'Datos finales: {\"nombre\":\"prueba\"}'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     body: 'Datos finales: {\"nombre\":\"prueba\"}'"}}
-[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
-[info] >    topic: 'viajes' {"user":"  topic: 'viajes'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   topic: 'viajes'"}}
-[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
-[debug] [2023-12-31T15:01:34.880Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=pause"}}
-[info] i  functions: Finished "us-central1-onDocumentWrite" in 438.943709ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finished \"us-central1-onDocumentWrite\" in 438.943709ms"}}
-[debug] [2023-12-31T15:01:34.882Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE"}}
-[debug] [2023-12-31T15:01:34.882Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=finish"}}
-[debug] [2023-12-31T15:01:34.883Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=close"}}
-[debug] [2023-12-31T15:01:34.883Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:01:34.887Z] [work-queue] {"queuedWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0-2023-12-31T15:01:34.887Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:01:34.887Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0-2023-12-31T15:01:34.887Z"],"workRunningCount":1}
-[debug] [2023-12-31T15:01:34.887Z] Accepted request POST /functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 --> us-central1-onDocumentUpdated-0
-[debug] [2023-12-31T15:01:34.891Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-12-31T15:01:34.891Z] [functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0, mapping to path=/functions/projects/"}}
-[debug] [2023-12-31T15:01:34.894Z] [worker-pool] addWorker(us-central1-onDocumentUpdated) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-onDocumentUpdated)"}}
-[debug] [2023-12-31T15:01:34.895Z] [worker-pool] Adding worker with key us-central1-onDocumentUpdated, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-onDocumentUpdated, total=1"}}
-[debug] [2023-12-31T15:01:35.552Z] [runtime-status] [79547] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js\"}"}}
-[debug] [2023-12-31T15:01:35.553Z] [runtime-status] [79547] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T15:01:35.553Z] [runtime-status] [79547] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
-[debug] [2023-12-31T15:01:35.554Z] [runtime-status] [79547] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T15:01:35.693Z] [runtime-status] [79547] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Checked functions.config() {\"config\":{}}"}}
-[debug] [2023-12-31T15:01:35.693Z] [runtime-status] [79547] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}}"}}
-[debug] [2023-12-31T15:01:35.693Z] [runtime-status] [79547] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T15:01:35.694Z] [runtime-status] [79547] Resolved module firebase-admin {"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js\"}"}}
-[debug] [2023-12-31T15:01:35.695Z] [runtime-status] [79547] Resolved module firebase-functions {"declared":true,"installed":true,"version":"4.5.0","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"4.5.0\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-functions/lib/v1/index.js\"}"}}
-[debug] [2023-12-31T15:01:35.695Z] [runtime-status] [79547] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"11.11.1","resolution":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"11.11.1\",\"resolution\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions/node_modules/firebase-admin/lib/index.js\"}}"}}
-[debug] [2023-12-31T15:01:35.699Z] [runtime-status] [79547] initializeApp(DEFAULT) {"storageBucket":"misviajes-d61aa.appspot.com","databaseURL":"https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app","projectId":"misviajes-d61aa"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] initializeApp(DEFAULT) {\"storageBucket\":\"misviajes-d61aa.appspot.com\",\"databaseURL\":\"https://misviajes-d61aa-default-rtdb.europe-west1.firebasedatabase.app\",\"projectId\":\"misviajes-d61aa\"}"}}
-[debug] [2023-12-31T15:01:35.707Z] [runtime-status] [79547] Functions runtime initialized. {"cwd":"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions","node_version":"18.19.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Functions runtime initialized. {\"cwd\":\"/Users/mamenvidal/repositories/FP067_DevsFrontJs/Prod4/FP.067-DevsFrontJs-Prod4_React/functions\",\"node_version\":\"18.19.0\"}"}}
-[debug] [2023-12-31T15:01:35.707Z] [runtime-status] [79547] Listening to port: /var/folders/2p/cx8v1m2x03zg5lrny1l3zcq40000gn/T/fire_emu_af77343e4502f133.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] Listening to port: /var/folders/2p/cx8v1m2x03zg5lrny1l3zcq40000gn/T/fire_emu_af77343e4502f133.sock"}}
-[debug] [2023-12-31T15:01:35.810Z] [worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE"}}
-[debug] [2023-12-31T15:01:35.810Z] [worker-pool] submitRequest(triggerId=us-central1-onDocumentUpdated) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onDocumentUpdated)"}}
-[info] i  functions: Beginning execution of "us-central1-onDocumentUpdated" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Beginning execution of \"us-central1-onDocumentUpdated\""}}
-[debug] [2023-12-31T15:01:35.810Z] [worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: BUSY"}}
-[debug] [2023-12-31T15:01:35.819Z] [runtime-status] [79547] ProcessBackground: lifting resource.name from resource {"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","service":"firestore.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"service\":\"firestore.googleapis.com\"}"}}
-[debug] [2023-12-31T15:01:35.820Z] [runtime-status] [79547] RunBackground {"data":{"value":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:01:34.432123Z"},"oldValue":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T14:59:19.782754Z"},"updateMask":{}},"context":{"eventId":"d2639da9-469c-483e-8109-0402c83124cb","timestamp":"2023-12-31T15:01:34.432123Z","eventType":"providers/cloud.firestore/eventTypes/document.update","resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] RunBackground {\"data\":{\"value\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:01:34.432123Z\"},\"oldValue\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T14:59:19.782754Z\"},\"updateMask\":{}},\"context\":{\"eventId\":\"d2639da9-469c-483e-8109-0402c83124cb\",\"timestamp\":\"2023-12-31T15:01:34.432123Z\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\"}}"}}
-[info] >  Notificación enviada exitosamente: projects/misviajes-d61aa/messages/470558977621804780 { {"user":"Notificación enviada exitosamente: projects/misviajes-d61aa/messages/470558977621804780 {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m Notificación enviada exitosamente: projects/misviajes-d61aa/messages/470558977621804780 {"}}
-[info] >    notification: { {"user":"  notification: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   notification: {"}}
-[info] >      title: 'Documento actualizado onDocumentUpdated', {"user":"    title: 'Documento actualizado onDocumentUpdated',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m     title: 'Documento actualizado onDocumentUpdated',"}}
-[info] >      body: 'Datos finales: {"nombre":"prueba"}' {"user":"    body: 'Datos finales: {\"nombre\":\"prueba\"}'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m     body: 'Datos finales: {\"nombre\":\"prueba\"}'"}}
-[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
-[info] >    topic: 'viajes' {"user":"  topic: 'viajes'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   topic: 'viajes'"}}
-[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
-[debug] [2023-12-31T15:01:36.636Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=pause"}}
-[info] i  functions: Finished "us-central1-onDocumentUpdated" in 825.742875ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finished \"us-central1-onDocumentUpdated\" in 825.742875ms"}}
-[debug] [2023-12-31T15:01:36.636Z] [worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE"}}
-[debug] [2023-12-31T15:01:36.637Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=finish"}}
-[debug] [2023-12-31T15:01:36.637Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=close"}}
-[debug] [2023-12-31T15:01:36.637Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:01:40.041Z] Dec 31, 2023 4:01:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:40.059Z] Dec 31, 2023 4:01:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:01:40.068Z] Dec 31, 2023 4:01:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:01:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:15.199Z] Dec 31, 2023 4:02:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:15.214Z] Dec 31, 2023 4:02:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:15 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:15.220Z] [work-queue] {"queuedWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T15:02:15.219Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:02:15.220Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T15:02:15.219Z"],"workRunningCount":1}
-[debug] [2023-12-31T15:02:15.220Z] Accepted request POST /functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 --> us-central1-onDocumentWrite-0
-[debug] [2023-12-31T15:02:15.222Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-12-31T15:02:15.222Z] [functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/"}}
-[debug] [2023-12-31T15:02:15.222Z] [worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite)"}}
-[info] i  functions: Beginning execution of "us-central1-onDocumentWrite" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Beginning execution of \"us-central1-onDocumentWrite\""}}
-[debug] [2023-12-31T15:02:15.222Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY"}}
-[debug] [2023-12-31T15:02:15.224Z] [runtime-status] [79519] ProcessBackground: lifting resource.name from resource {"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","service":"firestore.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"service\":\"firestore.googleapis.com\"}"}}
-[debug] [2023-12-31T15:02:15.224Z] [runtime-status] [79519] RunBackground {"data":{"value":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"},"dia":{"stringValue":"Lunes"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:02:15.208041Z"},"oldValue":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:01:34.432123Z"},"updateMask":{}},"context":{"eventId":"4f6586bc-5d03-4ae4-b1a6-f21ed01044cc","timestamp":"2023-12-31T15:02:15.208041Z","eventType":"providers/cloud.firestore/eventTypes/document.write","resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] RunBackground {\"data\":{\"value\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"},\"dia\":{\"stringValue\":\"Lunes\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:02:15.208041Z\"},\"oldValue\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:01:34.432123Z\"},\"updateMask\":{}},\"context\":{\"eventId\":\"4f6586bc-5d03-4ae4-b1a6-f21ed01044cc\",\"timestamp\":\"2023-12-31T15:02:15.208041Z\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\"}}"}}
-[info] >  Notificación enviada exitosamente: projects/misviajes-d61aa/messages/7486377045678624972 { {"user":"Notificación enviada exitosamente: projects/misviajes-d61aa/messages/7486377045678624972 {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m Notificación enviada exitosamente: projects/misviajes-d61aa/messages/7486377045678624972 {"}}
-[info] >    notification: { {"user":"  notification: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   notification: {"}}
-[info] >      title: 'Documento Cambiado onDocumentWrite', {"user":"    title: 'Documento Cambiado onDocumentWrite',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     title: 'Documento Cambiado onDocumentWrite',"}}
-[info] >      body: 'Datos finales: {"nombre":"prueba","dia":"Lunes"}' {"user":"    body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\"}'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\"}'"}}
-[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
-[info] >    topic: 'viajes' {"user":"  topic: 'viajes'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   topic: 'viajes'"}}
-[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
-[debug] [2023-12-31T15:02:15.951Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=pause"}}
-[info] i  functions: Finished "us-central1-onDocumentWrite" in 729.140833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finished \"us-central1-onDocumentWrite\" in 729.140833ms"}}
-[debug] [2023-12-31T15:02:15.952Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE"}}
-[debug] [2023-12-31T15:02:15.952Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=finish"}}
-[debug] [2023-12-31T15:02:15.952Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=close"}}
-[debug] [2023-12-31T15:02:15.952Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:02:15.957Z] [work-queue] {"queuedWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0-2023-12-31T15:02:15.956Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:02:15.957Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0-2023-12-31T15:02:15.956Z"],"workRunningCount":1}
-[debug] [2023-12-31T15:02:15.957Z] Accepted request POST /functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 --> us-central1-onDocumentUpdated-0
-[debug] [2023-12-31T15:02:15.960Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-12-31T15:02:15.961Z] [functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0, mapping to path=/functions/projects/"}}
-[debug] [2023-12-31T15:02:15.961Z] [worker-pool] submitRequest(triggerId=us-central1-onDocumentUpdated) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onDocumentUpdated)"}}
-[info] i  functions: Beginning execution of "us-central1-onDocumentUpdated" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Beginning execution of \"us-central1-onDocumentUpdated\""}}
-[debug] [2023-12-31T15:02:15.962Z] [worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: BUSY"}}
-[debug] [2023-12-31T15:02:15.967Z] [runtime-status] [79547] ProcessBackground: lifting resource.name from resource {"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","service":"firestore.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"service\":\"firestore.googleapis.com\"}"}}
-[debug] [2023-12-31T15:02:15.967Z] [runtime-status] [79547] RunBackground {"data":{"value":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"},"dia":{"stringValue":"Lunes"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:02:15.208041Z"},"oldValue":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:01:34.432123Z"},"updateMask":{}},"context":{"eventId":"4f6586bc-5d03-4ae4-b1a6-f21ed01044cc","timestamp":"2023-12-31T15:02:15.208041Z","eventType":"providers/cloud.firestore/eventTypes/document.update","resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] RunBackground {\"data\":{\"value\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"},\"dia\":{\"stringValue\":\"Lunes\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:02:15.208041Z\"},\"oldValue\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:01:34.432123Z\"},\"updateMask\":{}},\"context\":{\"eventId\":\"4f6586bc-5d03-4ae4-b1a6-f21ed01044cc\",\"timestamp\":\"2023-12-31T15:02:15.208041Z\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\"}}"}}
-[info] >  Notificación enviada exitosamente: projects/misviajes-d61aa/messages/8832074486390208743 { {"user":"Notificación enviada exitosamente: projects/misviajes-d61aa/messages/8832074486390208743 {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m Notificación enviada exitosamente: projects/misviajes-d61aa/messages/8832074486390208743 {"}}
-[info] >    notification: { {"user":"  notification: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   notification: {"}}
-[info] >      title: 'Documento actualizado onDocumentUpdated', {"user":"    title: 'Documento actualizado onDocumentUpdated',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m     title: 'Documento actualizado onDocumentUpdated',"}}
-[info] >      body: 'Datos finales: {"nombre":"prueba","dia":"Lunes"}' {"user":"    body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\"}'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m     body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\"}'"}}
-[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
-[info] >    topic: 'viajes' {"user":"  topic: 'viajes'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   topic: 'viajes'"}}
-[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
-[debug] [2023-12-31T15:02:16.476Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=pause"}}
-[info] i  functions: Finished "us-central1-onDocumentUpdated" in 514.924833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finished \"us-central1-onDocumentUpdated\" in 514.924833ms"}}
-[debug] [2023-12-31T15:02:16.477Z] [worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE"}}
-[debug] [2023-12-31T15:02:16.477Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=finish"}}
-[debug] [2023-12-31T15:02:16.477Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=close"}}
-[debug] [2023-12-31T15:02:16.477Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:02:22.741Z] Dec 31, 2023 4:02:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:22.760Z] Dec 31, 2023 4:02:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:22.772Z] Dec 31, 2023 4:02:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:26.172Z] Dec 31, 2023 4:02:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:26.189Z] Dec 31, 2023 4:02:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:26.198Z] Dec 31, 2023 4:02:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:45.230Z] Dec 31, 2023 4:02:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:54.016Z] Dec 31, 2023 4:02:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:02:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:02:54.037Z] [work-queue] {"queuedWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T15:02:54.036Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:02:54.037Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0-2023-12-31T15:02:54.036Z"],"workRunningCount":1}
-[debug] [2023-12-31T15:02:54.037Z] Accepted request POST /functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0 --> us-central1-onDocumentWrite-0
-[debug] [2023-12-31T15:02:54.040Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-12-31T15:02:54.040Z] [functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentWrite-0, mapping to path=/functions/projects/"}}
-[debug] [2023-12-31T15:02:54.040Z] [worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onDocumentWrite)"}}
-[info] i  functions: Beginning execution of "us-central1-onDocumentWrite" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Beginning execution of \"us-central1-onDocumentWrite\""}}
-[debug] [2023-12-31T15:02:54.041Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: BUSY"}}
-[debug] [2023-12-31T15:02:54.043Z] [runtime-status] [79519] ProcessBackground: lifting resource.name from resource {"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","service":"firestore.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"service\":\"firestore.googleapis.com\"}"}}
-[debug] [2023-12-31T15:02:54.043Z] [runtime-status] [79519] RunBackground {"data":{"value":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"},"dia":{"stringValue":"Lunes"},"fecha":{"stringValue":"2023-11-20"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:02:54.026549Z"},"oldValue":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"},"dia":{"stringValue":"Lunes"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:02:15.208041Z"},"updateMask":{}},"context":{"eventId":"d6d7dd77-cc46-4d88-bfaa-6c47a707bbc8","timestamp":"2023-12-31T15:02:54.026549Z","eventType":"providers/cloud.firestore/eventTypes/document.write","resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[runtime-status] [79519] RunBackground {\"data\":{\"value\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"},\"dia\":{\"stringValue\":\"Lunes\"},\"fecha\":{\"stringValue\":\"2023-11-20\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:02:54.026549Z\"},\"oldValue\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"},\"dia\":{\"stringValue\":\"Lunes\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:02:15.208041Z\"},\"updateMask\":{}},\"context\":{\"eventId\":\"d6d7dd77-cc46-4d88-bfaa-6c47a707bbc8\",\"timestamp\":\"2023-12-31T15:02:54.026549Z\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.write\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\"}}"}}
-[info] >  Notificación enviada exitosamente: projects/misviajes-d61aa/messages/2472756155997860343 { {"user":"Notificación enviada exitosamente: projects/misviajes-d61aa/messages/2472756155997860343 {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m Notificación enviada exitosamente: projects/misviajes-d61aa/messages/2472756155997860343 {"}}
-[info] >    notification: { {"user":"  notification: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   notification: {"}}
-[info] >      title: 'Documento Cambiado onDocumentWrite', {"user":"    title: 'Documento Cambiado onDocumentWrite',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     title: 'Documento Cambiado onDocumentWrite',"}}
-[info] >      body: 'Datos finales: {"nombre":"prueba","dia":"Lunes","fecha":"2023-11-20"}' {"user":"    body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\",\"fecha\":\"2023-11-20\"}'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m     body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\",\"fecha\":\"2023-11-20\"}'"}}
-[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
-[info] >    topic: 'viajes' {"user":"  topic: 'viajes'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m   topic: 'viajes'"}}
-[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
-[debug] [2023-12-31T15:02:54.750Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=pause"}}
-[info] i  functions: Finished "us-central1-onDocumentWrite" in 709.467833ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finished \"us-central1-onDocumentWrite\" in 709.467833ms"}}
-[debug] [2023-12-31T15:02:54.750Z] [worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"[worker-us-central1-onDocumentWrite-9ee94837-3289-4196-a115-95217706b064]: IDLE"}}
-[debug] [2023-12-31T15:02:54.751Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=finish"}}
-[debug] [2023-12-31T15:02:54.751Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentWrite"},"extension":{},"message":"Finishing up request with event=close"}}
-[debug] [2023-12-31T15:02:54.751Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:02:54.755Z] [work-queue] {"queuedWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0-2023-12-31T15:02:54.755Z"],"queueLength":1,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:02:54.756Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":["/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0-2023-12-31T15:02:54.755Z"],"workRunningCount":1}
-[debug] [2023-12-31T15:02:54.756Z] Accepted request POST /functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0 --> us-central1-onDocumentUpdated-0
-[debug] [2023-12-31T15:02:54.759Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
-[debug] [2023-12-31T15:02:54.759Z] [functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0, mapping to path=/functions/projects/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/functions/projects/misviajes-d61aa/triggers/us-central1-onDocumentUpdated-0, mapping to path=/functions/projects/"}}
-[debug] [2023-12-31T15:02:54.759Z] [worker-pool] submitRequest(triggerId=us-central1-onDocumentUpdated) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitRequest(triggerId=us-central1-onDocumentUpdated)"}}
-[info] i  functions: Beginning execution of "us-central1-onDocumentUpdated" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Beginning execution of \"us-central1-onDocumentUpdated\""}}
-[debug] [2023-12-31T15:02:54.760Z] [worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: BUSY {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: BUSY"}}
-[debug] [2023-12-31T15:02:54.762Z] [runtime-status] [79547] ProcessBackground: lifting resource.name from resource {"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","service":"firestore.googleapis.com"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] ProcessBackground: lifting resource.name from resource {\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"service\":\"firestore.googleapis.com\"}"}}
-[debug] [2023-12-31T15:02:54.762Z] [runtime-status] [79547] RunBackground {"data":{"value":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"},"dia":{"stringValue":"Lunes"},"fecha":{"stringValue":"2023-11-20"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:02:54.026549Z"},"oldValue":{"name":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h","fields":{"nombre":{"stringValue":"prueba"},"dia":{"stringValue":"Lunes"}},"createTime":"2023-12-31T14:59:19.782754Z","updateTime":"2023-12-31T15:02:15.208041Z"},"updateMask":{}},"context":{"eventId":"d6d7dd77-cc46-4d88-bfaa-6c47a707bbc8","timestamp":"2023-12-31T15:02:54.026549Z","eventType":"providers/cloud.firestore/eventTypes/document.update","resource":"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[runtime-status] [79547] RunBackground {\"data\":{\"value\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"},\"dia\":{\"stringValue\":\"Lunes\"},\"fecha\":{\"stringValue\":\"2023-11-20\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:02:54.026549Z\"},\"oldValue\":{\"name\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\",\"fields\":{\"nombre\":{\"stringValue\":\"prueba\"},\"dia\":{\"stringValue\":\"Lunes\"}},\"createTime\":\"2023-12-31T14:59:19.782754Z\",\"updateTime\":\"2023-12-31T15:02:15.208041Z\"},\"updateMask\":{}},\"context\":{\"eventId\":\"d6d7dd77-cc46-4d88-bfaa-6c47a707bbc8\",\"timestamp\":\"2023-12-31T15:02:54.026549Z\",\"eventType\":\"providers/cloud.firestore/eventTypes/document.update\",\"resource\":\"projects/misviajes-d61aa/databases/(default)/documents/MiViaje/ezGV0VWpjE53ThEZfG9h\"}}"}}
-[info] >  Notificación enviada exitosamente: projects/misviajes-d61aa/messages/2730203163925314831 { {"user":"Notificación enviada exitosamente: projects/misviajes-d61aa/messages/2730203163925314831 {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m Notificación enviada exitosamente: projects/misviajes-d61aa/messages/2730203163925314831 {"}}
-[info] >    notification: { {"user":"  notification: {","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   notification: {"}}
-[info] >      title: 'Documento actualizado onDocumentUpdated', {"user":"    title: 'Documento actualizado onDocumentUpdated',","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m     title: 'Documento actualizado onDocumentUpdated',"}}
-[info] >      body: 'Datos finales: {"nombre":"prueba","dia":"Lunes","fecha":"2023-11-20"}' {"user":"    body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\",\"fecha\":\"2023-11-20\"}'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m     body: 'Datos finales: {\"nombre\":\"prueba\",\"dia\":\"Lunes\",\"fecha\":\"2023-11-20\"}'"}}
-[info] >    }, {"user":"  },","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   },"}}
-[info] >    topic: 'viajes' {"user":"  topic: 'viajes'","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m   topic: 'viajes'"}}
-[info] >  } {"user":"}","metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"\u001b[90m> \u001b[39m }"}}
-[debug] [2023-12-31T15:02:55.099Z] Finishing up request with event=pause {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=pause"}}
-[info] i  functions: Finished "us-central1-onDocumentUpdated" in 339.002292ms {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finished \"us-central1-onDocumentUpdated\" in 339.002292ms"}}
-[debug] [2023-12-31T15:02:55.099Z] [worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"[worker-us-central1-onDocumentUpdated-e4a985c2-b649-4c5a-b1d4-20f106798b6d]: IDLE"}}
-[debug] [2023-12-31T15:02:55.099Z] Finishing up request with event=finish {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=finish"}}
-[debug] [2023-12-31T15:02:55.099Z] Finishing up request with event=close {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-onDocumentUpdated"},"extension":{},"message":"Finishing up request with event=close"}}
-[debug] [2023-12-31T15:02:55.099Z] [work-queue] {"queuedWork":[],"queueLength":0,"runningWork":[],"workRunningCount":0}
-[debug] [2023-12-31T15:03:03.486Z] Dec 31, 2023 4:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:03:03.506Z] Dec 31, 2023 4:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:03:03.516Z] Dec 31, 2023 4:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:03:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:03:24.046Z] Dec 31, 2023 4:03:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:03:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:03:39.416Z] Dec 31, 2023 4:03:39 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:03:39 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:03:54.411Z] Dec 31, 2023 4:03:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:03:54 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:03:54.415Z] Dec 31, 2023 4:03:54 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:03:54 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreWriteHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:04:03.529Z] Dec 31, 2023 4:04:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:04:03 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:04:03.534Z] Dec 31, 2023 4:04:03 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:04:03 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:04:24.095Z] Dec 31, 2023 4:04:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:04:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:05:24.123Z] Dec 31, 2023 4:05:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:05:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:06:24.141Z] Dec 31, 2023 4:06:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:06:24 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:07:06.466Z] Dec 31, 2023 4:07:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:07:06 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:07:06.468Z] Dec 31, 2023 4:07:06 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:07:06 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:09:20.707Z] Dec 31, 2023 4:09:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:09:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:09:20.717Z] Dec 31, 2023 4:09:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:09:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:09:20.738Z] Dec 31, 2023 4:09:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:09:20 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:09:34.757Z] Dec 31, 2023 4:09:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:09:34 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:09:34.758Z] Dec 31, 2023 4:09:34 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:09:34 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:15:26.234Z] Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:15:26.235Z] Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:15:26.259Z] Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:15:26.281Z] Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:15:26.286Z] Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:15:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:15:42.022Z] Dec 31, 2023 4:15:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:15:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:16:26.296Z] Dec 31, 2023 4:16:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:16:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:17:26.317Z] Dec 31, 2023 4:17:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:17:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:18:26.337Z] Dec 31, 2023 4:18:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:18:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:19:26.354Z] Dec 31, 2023 4:19:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:19:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:20:26.375Z] Dec 31, 2023 4:20:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:20:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:21:26.401Z] Dec 31, 2023 4:21:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:21:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:22:26.419Z] Dec 31, 2023 4:22:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:22:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:23:26.436Z] Dec 31, 2023 4:23:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:23:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:24:26.453Z] Dec 31, 2023 4:24:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:24:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:25:26.474Z] Dec 31, 2023 4:25:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:25:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:26:26.496Z] Dec 31, 2023 4:26:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:26:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:27:26.509Z] Dec 31, 2023 4:27:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:27:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:28:09.121Z] Dec 31, 2023 4:28:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:28:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:28:09.139Z] Dec 31, 2023 4:28:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:28:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:28:09.148Z] Dec 31, 2023 4:28:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:28:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:28:26.522Z] Dec 31, 2023 4:28:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:28:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:29:09.157Z] Dec 31, 2023 4:29:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:29:09 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:29:09.161Z] Dec 31, 2023 4:29:09 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:29:09 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:29:26.541Z] Dec 31, 2023 4:29:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:29:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:30:26.562Z] Dec 31, 2023 4:30:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:30:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:31:17.770Z] Dec 31, 2023 4:31:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:31:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:31:17.791Z] Dec 31, 2023 4:31:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:31:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:31:17.801Z] Dec 31, 2023 4:31:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:31:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:31:26.579Z] Dec 31, 2023 4:31:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:31:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:32:17.834Z] Dec 31, 2023 4:32:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:32:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:32:17.839Z] Dec 31, 2023 4:32:17 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:32:17 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:32:26.601Z] Dec 31, 2023 4:32:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:32:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:33:26.616Z] Dec 31, 2023 4:33:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:33:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:34:07.990Z] Dec 31, 2023 4:34:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:34:07 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:34:08.006Z] Dec 31, 2023 4:34:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:34:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:34:08.016Z] Dec 31, 2023 4:34:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:34:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:34:26.632Z] Dec 31, 2023 4:34:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:34:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:35:08.030Z] Dec 31, 2023 4:35:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:35:08 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:35:08.039Z] Dec 31, 2023 4:35:08 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:35:08 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:35:26.652Z] Dec 31, 2023 4:35:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:35:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:36:26.677Z] Dec 31, 2023 4:36:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:36:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:37:26.694Z] Dec 31, 2023 4:37:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:37:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:38:26.712Z] Dec 31, 2023 4:38:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:38:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:38:49.241Z] Dec 31, 2023 4:38:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:38:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:38:49.286Z] Dec 31, 2023 4:38:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:38:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:38:49.286Z] Dec 31, 2023 4:38:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:38:49 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:26.726Z] Dec 31, 2023 4:39:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:27.950Z] Dec 31, 2023 4:39:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:27 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:28.012Z] Dec 31, 2023 4:39:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:28.013Z] Dec 31, 2023 4:39:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:28 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:30.131Z] Dec 31, 2023 4:39:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:30.160Z] Dec 31, 2023 4:39:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:30.174Z] Dec 31, 2023 4:39:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:47.784Z] Dec 31, 2023 4:39:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:47.813Z] Dec 31, 2023 4:39:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:39:47.824Z] Dec 31, 2023 4:39:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:39:47 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:10.101Z] Dec 31, 2023 4:40:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:10.127Z] Dec 31, 2023 4:40:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:10.128Z] Dec 31, 2023 4:40:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:10 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:12.159Z] Dec 31, 2023 4:40:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:12.180Z] Dec 31, 2023 4:40:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:12.198Z] Dec 31, 2023 4:40:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:12 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:22.040Z] Dec 31, 2023 4:40:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:22.081Z] Dec 31, 2023 4:40:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:22.104Z] Dec 31, 2023 4:40:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:22 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:26.747Z] Dec 31, 2023 4:40:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:30.955Z] Dec 31, 2023 4:40:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:30.978Z] Dec 31, 2023 4:40:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:30.998Z] Dec 31, 2023 4:40:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:30 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:40.789Z] Dec 31, 2023 4:40:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:40.815Z] Dec 31, 2023 4:40:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:40:40.837Z] Dec 31, 2023 4:40:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:40:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:41:26.767Z] Dec 31, 2023 4:41:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:41:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:41:40.865Z] Dec 31, 2023 4:41:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:41:40 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:41:40.871Z] Dec 31, 2023 4:41:40 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose
-INFO: channel closed
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:41:40 PM com.google.cloud.datastore.emulator.firestore.webchannel.FirestoreV1WebChannelAdapter$FirestoreListenHandler onClose\nINFO: channel closed\n"}}
-[debug] [2023-12-31T15:42:26.787Z] Dec 31, 2023 4:42:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:42:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:43:26.806Z] Dec 31, 2023 4:43:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:43:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:44:26.825Z] Dec 31, 2023 4:44:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:44:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:45:26.843Z] Dec 31, 2023 4:45:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:45:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:46:26.863Z] Dec 31, 2023 4:46:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:46:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:47:26.883Z] Dec 31, 2023 4:47:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:47:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:48:26.906Z] Dec 31, 2023 4:48:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:48:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:49:26.925Z] Dec 31, 2023 4:49:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:49:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:50:26.937Z] Dec 31, 2023 4:50:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:50:26 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:51:42.430Z] Dec 31, 2023 4:51:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:51:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:52:42.451Z] Dec 31, 2023 4:52:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:52:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:53:42.467Z] Dec 31, 2023 4:53:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:53:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:54:42.481Z] Dec 31, 2023 4:54:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:54:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:55:42.496Z] Dec 31, 2023 4:55:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:55:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:56:42.510Z] Dec 31, 2023 4:56:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:56:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:57:42.529Z] Dec 31, 2023 4:57:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:57:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:58:42.544Z] Dec 31, 2023 4:58:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:58:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T15:59:42.563Z] Dec 31, 2023 4:59:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 4:59:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T16:00:42.580Z] Dec 31, 2023 5:00:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 5:00:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T16:01:42.599Z] Dec 31, 2023 5:01:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 5:01:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T16:02:42.616Z] Dec 31, 2023 5:02:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 5:02:42 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
-[debug] [2023-12-31T16:02:45.030Z] Dec 31, 2023 5:02:45 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 03, 2024 9:44:37 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\r\nINFO: Connected to new websocket client\r\n"}}
+[debug] [2024-01-03T08:46:12.088Z] Jan 03, 2024 9:46:12 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed
 INFO: Websocket client disconnected
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 5:02:45 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\nINFO: Websocket client disconnected\n"}}
-[debug] [2023-12-31T16:02:45.041Z] Dec 31, 2023 5:02:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
-INFO: Detected non-HTTP/2 connection.
- {"metadata":{"emulator":{"name":"firestore"},"message":"Dec 31, 2023 5:02:45 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 03, 2024 9:46:12 AM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler channelClosed\r\nINFO: Websocket client disconnected\r\n"}}

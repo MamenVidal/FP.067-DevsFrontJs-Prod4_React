@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3363624d-1893-44d5-94f3-7ddc21aa2885" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/InicioScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/InicioScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MultimediaScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/MultimediaScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firebaseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/firebaseConfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/firestore-debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/firestore-debug.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase-debug.log" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

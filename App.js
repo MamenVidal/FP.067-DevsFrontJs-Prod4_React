@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { Text, View, Button, Platform, StyleSheet } from 'react-native';
+import React, { useEffect } from 'react';
+import { Text, View, StyleSheet, Alert, StatusBar } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { TouchableOpacity } from 'react-native';
@@ -7,30 +7,66 @@ import { MaterialIcons } from '@expo/vector-icons';
 import InicioScreen from './InicioScreen'; 
 import DetallesViajeScreen from './DetallesViajeScreen'; 
 import MultimediaScreenComponent from './MultimediaScreen'; 
-import * as Device from 'expo-device';
-import * as Notifications from 'expo-notifications';
+import messaging from '@react-native-firebase/messaging';
+
+// Configurar el manejador de mensajes en segundo plano
+messaging().setBackgroundMessageHandler(async remoteMessage => {
+  console.log('Mensaje recibido en segundo plano:', remoteMessage);
+
+    // Supongamos que quieres mostrar una alerta o realizar una acción específica
+    if (remoteMessage.notification) {
+      // Acceder a la información de la notificación
+      const { title, body } = remoteMessage.notification;
+  
+  //Consola de depuración, así vemos si se recibe el mensaje
+      console.log('Título de la notificación:', title);
+      console.log('Cuerpo de la notificación:', body);
+  
+    }
+  });
 
 const Stack = createStackNavigator();
 
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: false,
-    shouldSetBadge: false,
-  }),
-});
 
 export default function App() {
 
-  const [expoPushToken, setExpoPushToken] = useState('');
-  const [notification, setNotification] = useState(false);
-  const notificationListener = useRef();
-  const responseListener = useRef();
+ 
+  const requestUserPermission = async () => {
+    const authStatus = await messaging().requestPermission();
+    return (
+      authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
+      authStatus === messaging.AuthorizationStatus.PROVISIONAL
+    );
+  };
+
+  
+
+  useEffect(() => {
+    const initFCM = async () => {
+      const hasPermission = await requestUserPermission();
+      if (hasPermission) {
+        const token = await messaging().getToken();
+        console.log('FCM Token:', token);
+      } else {
+        console.log('User permission denied');
+      }
+    };
+
+    
+
+    initFCM();
+
+    const unsubscribe = messaging().onMessage(async remoteMessage => {
+      Alert.alert('¡Nuevo mensaje FCM recibido!', JSON.stringify(remoteMessage));
+    });
+
+    return unsubscribe;
+  }, []);
   
   const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        paddingHorizontal: 10,
+      flex: 1,
+      paddingHorizontal: 10,
     },
     iconContainer: {
       backgroundColor: '#007bff',
@@ -40,24 +76,8 @@ export default function App() {
     },
   });
   
-  useEffect(() => {
-    registerForPushNotificationsAsync().then(token => setExpoPushToken(token));
-
-    notificationListener.current = Notifications.addNotificationReceivedListener(notification => {
-      setNotification(notification);
-    });
-
-    responseListener.current = Notifications.addNotificationResponseReceivedListener(response => {
-      console.log(response);
-    });
-
-    return () => {
-      Notifications.removeNotificationSubscription(notificationListener.current);
-      Notifications.removeNotificationSubscription(responseListener.current);
-    };
-  }, []);
-
   return (
+
     <View style={{ flex: 1 }}>
         <NavigationContainer>
           <Stack.Navigator
@@ -104,66 +124,5 @@ export default function App() {
             />
           </Stack.Navigator>
         </NavigationContainer>
-      {/* Bloque de notificaciones */}
-      <View style={{ alignItems: 'center', justifyContent: 'space-around', marginTop: 10  }}>
-        <Text style={{ lineHeight: 24 }}>Your expo push token: {expoPushToken}</Text>
-        <View style={{ alignItems: 'center', justifyContent: 'center'}}>
-          <Text style={{ lineHeight: 24 }}>Title: {notification && notification.request.content.title}</Text>
-          <Text style={{ lineHeight: 24 }}>Body: {notification && notification.request.content.body}</Text>
-          <Text style={{ lineHeight: 24 }}>Data: {notification && JSON.stringify(notification.request.content.data)}</Text>
         </View>
-        <Button
-          title="Clic para recibir notificación"
-          onPress={async () => {
-            await schedulePushNotification();
-          }}
-        />
-      </View>
-    </View>
-    
-  );
-  
-}
-
-async function schedulePushNotification() {
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title: "Tienes un mensaje! 📬",
-      body: 'Aquí va el mensaje de la notificación.',
-      data: { data: 'goes here' },
-    },
-    trigger: { seconds: 2 },
-  });
-}
-
-async function registerForPushNotificationsAsync() {
-  let token;
-
-  if (Platform.OS === 'android') {
-    await Notifications.setNotificationChannelAsync('default', {
-      name: 'default',
-      importance: Notifications.AndroidImportance.MAX,
-      vibrationPattern: [0, 250, 250, 250],
-      lightColor: '#FF231F7C',
-    });
-  }
-
-  if (Device.isDevice) {
-    const { status: existingStatus } = await Notifications.getPermissionsAsync();
-    let finalStatus = existingStatus;
-    if (existingStatus !== 'granted') {
-      const { status } = await Notifications.requestPermissionsAsync();
-      finalStatus = status;
-    }
-    if (finalStatus !== 'granted') {
-      alert('Failed to get push token for push notification!');
-      return;
-    }
-    token = (await Notifications.getExpoPushTokenAsync()).data;
-    console.log(token);
-  } else {
-    alert('Must use physical device for Push Notifications');
-  }
-
-  return token;
-}
+  );}
