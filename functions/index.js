@@ -4,10 +4,10 @@ const {onRequest} = require("firebase-functions/v2/https");
 const {onDocumentCreated} = require("firebase-functions/v2/firestore");
 
 // The Firebase Admin SDK to access Firestore.
-const {initializeApp} = require("firebase-admin/app");
+// const {initializeApp} = require("firebase-admin/app");
 const {getFirestore} = require("firebase-admin/firestore");
-const functions = require('firebase-functions');
-const admin = require('firebase-admin');
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
 admin.initializeApp();
 
 // Take the text parameter passed to this HTTP endpoint and insert it into
@@ -42,48 +42,56 @@ exports.makeuppercase = onDocumentCreated("/messages/{documentId}", (event) => {
 });
 
 exports.onDocumentWrite = functions.firestore
-  .document('MiViaje/{docId}')
-  .onWrite((change, context) => {
-    const document = change.after.exists ? change.after.data() : null;
-    const message = {
-      notification: {
-        title: 'Documento Cambiado onDocumentWrite',
-        body: 'Datos finales: '+JSON.stringify(document)
-      },
-      topic: 'viajes' 
-    };
+    .document("MiViaje/{docId}")
+    .onWrite((change, context) => {
+      const document = change.after.exists ? change.after.data() : null;
+      const message = {
+        notification: {
+          title: "Documento Cambiado onDocumentWrite",
+          body: "Datos finales: "+JSON.stringify(document),
+        },
+        topic: "viajes",
+      };
 
-    // Enviar notificación
-    return admin.messaging().send(message)
-      .then(response => {
-        console.log('Notificación enviada exitosamente:', response, message);
-        return response;
-      })
-      .catch(error => {
-        console.error('Error enviando la notificación:', error, message);
-      });
-  });
+      // Enviar notificación
+      return admin.messaging().send(message)
+          .then((response) => {
+            console.log("Notificación enviada exitosamente:",
+                response,
+                message);
+            return response;
+          })
+          .catch((error) => {
+            console.error("Error enviando la notificación:",
+                error,
+                message);
+          });
+    });
 
 exports.onDocumentUpdated = functions.firestore
-  .document('MiViaje/{docId}')
-  .onUpdate((change, context) => {
+    .document("MiViaje/{docId}")
+    .onUpdate((change, context) => {
     // Tu lógica para cuando un documento se actualiza
-    const newValue = change.after.data();
-    const message = {
-      notification: {
-        title: 'Documento actualizado onDocumentUpdated',
-        body: 'Datos finales: '+JSON.stringify(newValue)
-      },
-      topic: 'viajes' // Reemplaza con el topic al cual los usuarios se suscriben
-    };
+      const newValue = change.after.data();
+      const message = {
+        notification: {
+          title: "Documento actualizado onDocumentUpdated",
+          body: "Datos finales: "+JSON.stringify(newValue),
+        },
+        topic: "viajes",
+      };
 
-    // Enviar notificación
-    return admin.messaging().send(message)
-      .then(response => {
-          console.log('Notificación enviada exitosamente:', response, message);
-          return response;
-      })
-      .catch(error => {
-          console.error('Error enviando la notificación:', error, message);
-      });
-});
+      // Enviar notificación
+      return admin.messaging().send(message)
+          .then((response) => {
+            console.log("Notificación enviada exitosamente:",
+                response,
+                message);
+            return response;
+          })
+          .catch((error) => {
+            console.error("Error enviando la notificación:",
+                error,
+                message);
+          });
+    });
